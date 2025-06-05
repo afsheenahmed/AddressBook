@@ -217,13 +217,59 @@
         </section>
         <section class="pt-50 pb-50">
             <div class="container">
+                @if(@session('success'))
+                <div
+                    class="alert alert-success alert-dismissible fade show"
+                    role="alert"
+                >
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="alert"
+                        aria-label="Close"
+                    ></button>
+                    <strong>Alert ! {{session('success')}}</strong>
+                </div>
+                
+                <script>
+                    var alertList = document.querySelectorAll(".alert");
+                    alertList.forEach(function (alert) {
+                        new bootstrap.Alert(alert);
+                    });
+                </script>
+                
+                @endif
+
+                @if(@session('error'))
+                <div
+                    class="alert alert-danger alert-dismissible fade show"
+                    role="alert"
+                >
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="alert"
+                        aria-label="Close"
+                    ></button>
+                    <strong>Alert ! {{session('error')}}</strong>
+                </div>
+                
+                <script>
+                    var alertList = document.querySelectorAll(".alert");
+                    alertList.forEach(function (alert) {
+                        new bootstrap.Alert(alert);
+                    });
+                </script>
+                
+                @endif
                 <div class="row">
                     <div class="col-xl-8 col-lg-10 m-auto">
                         <div class="contact-from-area padding-20-row-col wow FadeInUp">
                             <h3 class="mb-10 text-center">Drop Us a Line</h3>
                             <p class="text-muted mb-30 text-center font-sm">Lorem ipsum dolor sit amet consectetur.</p>
-                            <form class="contact-form-style text-center" id="contact-form" action="#" method="post">
-                                <div class="row">
+                            <form class="contact-form-style text-center" id="contact-form" action="/contactadmin" method="post">
+                            @csrf    
+                            <div class="row">
                                     <div class="col-lg-6 col-md-6">
                                         <div class="input-style mb-20">
                                             <input name="name" placeholder="First Name" type="text">

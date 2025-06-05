@@ -15,10 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('Name');
             $table->string('Email');
+            $table->string('Phone');
             $table->string('Subject');
             $table->string('Message');
-            $table->integer('Contacted_By');
-            $table->foreign('Contacted_By')->references('id')->on('users');
             $table->timestamps();
         });
     }

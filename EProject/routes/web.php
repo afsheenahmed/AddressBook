@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserController;
 //User Routes
 Route::get('/', function () {
     return view('User.index');
@@ -33,6 +33,7 @@ Route::get('/shop', function () {
     return view('User.shop-grid-right');
 });
 
+Route::post('/contactadmin',[UserController::class, 'contactdata']);
 
 
 //Admin Routes
