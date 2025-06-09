@@ -17,7 +17,7 @@
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
     'cipher' => 'AES-256-CBC',
-    'key' => 'base64:Yb6uET7Oqcb6yvH+q0dkmFplNiA9sYNZCEhR733HbCc=',
+    'key' => 'base64:DDvGsVAE1oazwQfbpyo538UxM3hQYNQiymww1u6hFyc=',
     'previous_keys' => 
     array (
     ),
@@ -165,8 +165,8 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\Users\\Admin\\Desktop\\DISM E-Project\\2407D\\Afsheen\\AddressBook\\EProject\\storage\\framework/cache/data',
-        'lock_path' => 'C:\\Users\\Admin\\Desktop\\DISM E-Project\\2407D\\Afsheen\\AddressBook\\EProject\\storage\\framework/cache/data',
+        'path' => 'C:\\Users\\pc\\OneDrive\\Desktop\\EProjectSem2\\EProject\\storage\\framework/cache/data',
+        'lock_path' => 'C:\\Users\\pc\\OneDrive\\Desktop\\EProjectSem2\\EProject\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -221,7 +221,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'address_book_db',
+        'database' => 'eproject',
         'prefix' => '',
         'foreign_key_constraints' => true,
         'busy_timeout' => NULL,
@@ -234,7 +234,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'address_book_db',
+        'database' => 'eproject',
         'username' => 'root',
         'password' => '',
         'unix_socket' => '',
@@ -254,7 +254,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'address_book_db',
+        'database' => 'eproject',
         'username' => 'root',
         'password' => '',
         'unix_socket' => '',
@@ -274,7 +274,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'address_book_db',
+        'database' => 'eproject',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -289,7 +289,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'address_book_db',
+        'database' => 'eproject',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -339,7 +339,7 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\Admin\\Desktop\\DISM E-Project\\2407D\\Afsheen\\AddressBook\\EProject\\storage\\app/private',
+        'root' => 'C:\\Users\\pc\\OneDrive\\Desktop\\EProjectSem2\\EProject\\storage\\app/private',
         'serve' => true,
         'throw' => false,
         'report' => false,
@@ -347,7 +347,7 @@
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\Admin\\Desktop\\DISM E-Project\\2407D\\Afsheen\\AddressBook\\EProject\\storage\\app/public',
+        'root' => 'C:\\Users\\pc\\OneDrive\\Desktop\\EProjectSem2\\EProject\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -369,7 +369,7 @@
     ),
     'links' => 
     array (
-      'C:\\Users\\Admin\\Desktop\\DISM E-Project\\2407D\\Afsheen\\AddressBook\\EProject\\public\\storage' => 'C:\\Users\\Admin\\Desktop\\DISM E-Project\\2407D\\Afsheen\\AddressBook\\EProject\\storage\\app/public',
+      'C:\\Users\\pc\\OneDrive\\Desktop\\EProjectSem2\\EProject\\public\\storage' => 'C:\\Users\\pc\\OneDrive\\Desktop\\EProjectSem2\\EProject\\storage\\app/public',
     ),
   ),
   'fortify-options' => 
@@ -496,14 +496,14 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\Users\\Admin\\Desktop\\DISM E-Project\\2407D\\Afsheen\\AddressBook\\EProject\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\pc\\OneDrive\\Desktop\\EProjectSem2\\EProject\\storage\\logs/laravel.log',
         'level' => 'debug',
         'replace_placeholders' => true,
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\Users\\Admin\\Desktop\\DISM E-Project\\2407D\\Afsheen\\AddressBook\\EProject\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\pc\\OneDrive\\Desktop\\EProjectSem2\\EProject\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
         'replace_placeholders' => true,
@@ -568,13 +568,13 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\Users\\Admin\\Desktop\\DISM E-Project\\2407D\\Afsheen\\AddressBook\\EProject\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\pc\\OneDrive\\Desktop\\EProjectSem2\\EProject\\storage\\logs/laravel.log',
       ),
     ),
   ),
   'mail' => 
   array (
-    'default' => 'log',
+    'default' => 'smtp',
     'mailers' => 
     array (
       'smtp' => 
@@ -582,10 +582,10 @@
         'transport' => 'smtp',
         'scheme' => NULL,
         'url' => NULL,
-        'host' => '127.0.0.1',
-        'port' => '2525',
-        'username' => NULL,
-        'password' => NULL,
+        'host' => 'smtp.gmail.com',
+        'port' => '587',
+        'username' => 'afsheenahmedd@gmail.com',
+        'password' => 'knym myei rwvi xwcc',
         'timeout' => NULL,
         'local_domain' => 'localhost',
       ),
@@ -638,7 +638,7 @@
     ),
     'from' => 
     array (
-      'address' => 'hello@example.com',
+      'address' => 'afsheenahmedd@gmail.com',
       'name' => 'Laravel',
     ),
     'markdown' => 
@@ -646,7 +646,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\Users\\Admin\\Desktop\\DISM E-Project\\2407D\\Afsheen\\AddressBook\\EProject\\resources\\views/vendor/mail',
+        0 => 'C:\\Users\\pc\\OneDrive\\Desktop\\EProjectSem2\\EProject\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -765,7 +765,7 @@
     'lifetime' => 120,
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\Users\\Admin\\Desktop\\DISM E-Project\\2407D\\Afsheen\\AddressBook\\EProject\\storage\\framework/sessions',
+    'files' => 'C:\\Users\\pc\\OneDrive\\Desktop\\EProjectSem2\\EProject\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -892,14 +892,14 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\Users\\Admin\\Desktop\\DISM E-Project\\2407D\\Afsheen\\AddressBook\\EProject\\resources\\views',
+      0 => 'C:\\Users\\pc\\OneDrive\\Desktop\\EProjectSem2\\EProject\\resources\\views',
     ),
-    'compiled' => 'C:\\Users\\Admin\\Desktop\\DISM E-Project\\2407D\\Afsheen\\AddressBook\\EProject\\storage\\framework\\views',
+    'compiled' => 'C:\\Users\\pc\\OneDrive\\Desktop\\EProjectSem2\\EProject\\storage\\framework\\views',
   ),
   'livewire' => 
   array (
     'class_namespace' => 'App\\Livewire',
-    'view_path' => 'C:\\Users\\Admin\\Desktop\\DISM E-Project\\2407D\\Afsheen\\AddressBook\\EProject\\resources\\views/livewire',
+    'view_path' => 'C:\\Users\\pc\\OneDrive\\Desktop\\EProjectSem2\\EProject\\resources\\views/livewire',
     'layout' => 'components.layouts.app',
     'lazy_placeholder' => NULL,
     'temporary_file_upload' => 

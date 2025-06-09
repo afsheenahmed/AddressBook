@@ -13,32 +13,50 @@
     <meta property="og:image" content="">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/theme/favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/main.css?v=3.4">
+
 </head>
 
 <body>
+   
     <!-- Modal -->
     <div class="modal fade custom-modal" id="onloadModal" tabindex="-1" aria-labelledby="onloadModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 <div class="modal-body">
-                    <div class="deal" style="background-image: url('assets/imgs/banner/menu-banner-7.png')">
+                    <div class="deal" style="background-image: url('assets/imgs/banner/img-3.jpg')">
                         <div class="deal-top">
                             <h2 class="text-brand">Deal of the Day</h2>
-                            <h5>Limited quantities.</h5>
+                            <h5 style="font-weight: bold;">Limited quantities.</h5>
                         </div>
                         <div class="deal-content">
-                            <h6 class="product-title"><a href="shop-product-right.html">Summer Collection New Morden Design</a></h6>
-                            <div class="product-price"><span class="new-price">$139.00</span><span class="old-price">$160.99</span></div>
+                            <h6 style="font-weight: bold;" class="product-title"><a href="/shop">Summer Collection New Morden Design</a></h6>
+                            <div class="product-price"><span class="new-price">$139.00</span><span class="old-price" style="font-weight: bold;color: black ">$160.99</span></div>
                         </div>
                         <div class="deal-bottom">
-                            <p>Hurry Up! Offer End In:</p>
-                            <div class="deals-countdown" data-countdown="2025/03/25 00:00:00"><span class="countdown-section"><span class="countdown-amount hover-up">03</span><span class="countdown-period"> days </span></span><span class="countdown-section"><span class="countdown-amount hover-up">02</span><span class="countdown-period"> hours </span></span>
-                                <span
-                                    class="countdown-section"><span class="countdown-amount hover-up">43</span><span class="countdown-period"> mins </span></span><span class="countdown-section"><span class="countdown-amount hover-up">29</span><span class="countdown-period"> sec </span></span>
-                            </div>
+                            <p style="font-weight: bold;"  >Hurry Up! Offer End In:</p>
+                          <div class="deals-countdown" data-countdown="2025/03/25 00:00:00">
+  <span class="countdown-section">
+    <span class="countdown-amount hover-up">03</span>
+    <span class="countdown-period" style="color: black !important;"> days </span>
+  </span>
+  <span class="countdown-section">
+    <span class="countdown-amount hover-up">02</span>
+    <span class="countdown-period" style="color: black !important; font-weight: bold;"> hours </span>
+  </span>
+  <span class="countdown-section">
+    <span class="countdown-amount hover-up">43</span>
+    <span class="countdown-period" style="color: black !important;"> mins </span>
+  </span>
+  <span class="countdown-section">
+    <span class="countdown-amount hover-up">29</span>
+    <span class="countdown-period" style="color: black !important;"> sec </span>
+  </span>
+</div>
+
                             <a href="/shop" class="btn hover-up">Shop Now <i class="fi-rs-arrow-right"></i></a>
                         </div>
                     </div>
@@ -161,7 +179,7 @@
                                     </div>
                                     <div class="product-extra-link2">
                                         <button type="submit" class="button button-add-to-cart">Add to cart</button>
-                                        <a aria-label="Add To Wishlist" class="action-btn hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                        <a aria-label="Add To Wishlist" class="action-btn hover-up" href="/wishlist"><i class="fi-rs-heart"></i></a>
                                         <a aria-label="Compare" class="action-btn hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
                                     </div>
                                 </div>
@@ -187,8 +205,8 @@
                     <div class="col-xl-3 col-lg-4">
                         <div class="header-info">
                             <ul>
-                                <li><i class="fi-rs-smartphone"></i> <a href="#">(+01) - 2345 - 6789</a></li>
-                                <li><i class="fi-rs-marker"></i><a href="/contact">Our location</a></li>
+                                <li><i class="fas fa-phone-alt"></i> <a href="#">(+01) - 2345 - 6789</a></li>
+                                <li><i class="fas fa-map-marker-alt"></i><a href="/contact">Our location</a></li>
                             </ul>
                         </div>
                     </div>
@@ -214,7 +232,7 @@
                                         <li><a href="#"><img src="assets/imgs/theme/flag-ru.png" alt="">Pусский</a></li>
                                     </ul>
                                 </li>
-                                <li><i class="fi-rs-user"></i><a href="">Log In / Sign Up</a></li>
+                                <li><i class="fas fa-user"></i><a href="/userlogin">Log In / Sign Up</a></li>
                             </ul>
                         </div>
                     </div>
@@ -225,7 +243,10 @@
             <div class="container">
                 <div class="header-wrap">
                     <div class="logo logo-width-1">
-                        <a href="/"><img src="assets/imgs/theme/logo.svg" alt="logo"></a>
+                       <a href="/" style="display:inline-block;">
+  <img src="assets/imgs/theme/nl.png" alt="logo" style="width:200px; height:80px;">
+
+</a>
                     </div>
                     <div class="header-right">
                         <div class="search-style-2">
@@ -234,6 +255,7 @@
                                     <option>All Categories</option>
                                     <option>Jewellery</option>
                                     <option>Cosmetics</option>
+                                    
                                 </select>
                                 <input type="text" placeholder="Search for items...">
                             </form>
@@ -241,7 +263,7 @@
                         <div class="header-action-right">
                             <div class="header-action-2">
                                 <div class="header-action-icon-2">
-                                    <a href="shop-wishlist.html">
+                                    <a href="/wishlist">
                                         <img class="svgInject" alt="Evara" src="assets/imgs/theme/icons/icon-heart.svg">
                                         <span class="pro-count blue">4</span>
                                     </a>
@@ -255,10 +277,10 @@
                                         <ul>
                                             <li>
                                                 <div class="shopping-cart-img">
-                                                    <a href="shop-product-right.html"><img alt="Evara" src="assets/imgs/shop/thumbnail-3.jpg"></a>
+                                                    <a href="/shop"><img alt="Evara" src="assets/imgs/shop/thumbnail-3.jpg"></a>
                                                 </div>
                                                 <div class="shopping-cart-title">
-                                                    <h4><a href="shop-product-right.html">Daisy Casual Bag</a></h4>
+                                                    <h4><a href="/shop">Daisy Casual Bag</a></h4>
                                                     <h4><span>1 × </span>$800.00</h4>
                                                 </div>
                                                 <div class="shopping-cart-delete">
@@ -267,10 +289,10 @@
                                             </li>
                                             <li>
                                                 <div class="shopping-cart-img">
-                                                    <a href="shop-product-right.html"><img alt="Evara" src="assets/imgs/shop/thumbnail-2.jpg"></a>
+                                                    <a href="/shop"><img alt="Evara" src="assets/imgs/shop/thumbnail-2.jpg"></a>
                                                 </div>
                                                 <div class="shopping-cart-title">
-                                                    <h4><a href="shop-product-right.html">Corduroy Shirts</a></h4>
+                                                    <h4><a href="/shop">Corduroy Shirts</a></h4>
                                                     <h4><span>1 × </span>$3200.00</h4>
                                                 </div>
                                                 <div class="shopping-cart-delete">
@@ -299,179 +321,97 @@
             <div class="container">
                 <div class="header-wrap header-space-between position-relative">
                     <div class="logo logo-width-1 d-block d-lg-none">
-                        <a href="/"><img src="assets/imgs/theme/logo.svg" alt="logo"></a>
+<a href="/" style="display:inline-block;">
+  <img src="assets/imgs/theme/nl.png" alt="logo" style="width:200px; height:80px;">
+</a>
+
                     </div>
                     <div class="header-nav d-none d-lg-flex">
                         <div class="main-categori-wrap d-none d-lg-block">
                             <a class="categori-button-active" href="#">
-                                <span class="fi-rs-apps"></span> Browse Categories
+                                <span class="fas fa-list"></span> Browse Categories
                             </a>
                             <div class="categori-dropdown-wrap categori-dropdown-active-large">
                                 <ul>
                                     <li class="has-children">
-                                        <a href="/shop"><i class="evara-font-dress"></i>Women's Clothing</a>
+                                        <a href="/shop">Cosmetics</a>
                                         <div class="dropdown-menu">
                                             <ul class="mega-menu d-lg-flex">
                                                 <li class="mega-menu-col col-lg-7">
                                                     <ul class="d-lg-flex">
                                                         <li class="mega-menu-col col-lg-6">
                                                             <ul>
-                                                                <li><span class="submenu-title">Hot & Trending</span></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Dresses</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Blouses & Shirts</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Hoodies & Sweatshirts</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Women's Sets</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Suits & Blazers</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Bodysuits</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Tanks & Camis</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Coats & Jackets</a></li>
+                                                                <li><span class="submenu-title">Face Makeup</span></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Compact Powder</a></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Foundation</a></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Highlighter</a></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Blush</a></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Concealer</a></li>
                                                             </ul>
                                                         </li>
                                                         <li class="mega-menu-col col-lg-6">
                                                             <ul>
-                                                                <li><span class="submenu-title">Bottoms</span></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Leggings</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Skirts</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Shorts</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Jeans</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Pants & Capris</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Bikini Sets</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Cover-Ups</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Swimwear</a></li>
+                                                               <li><span class="submenu-title">Eye Makeup</span></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">EyeLiner</a></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Mascara</a></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Eyeshadow Pallete</a></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Eye Pencil</a></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Eyebrow Pencil</a></li>
+                                                            
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </li>
                                                 <li class="mega-menu-col col-lg-5">
                                                     <div class="header-banner2">
-                                                        <img src="assets/imgs/banner/menu-banner-2.jpg" alt="menu_banner1">
-                                                        <div class="banne_info">
-                                                            <h6>10% Off</h6>
-                                                            <h4>New Arrival</h4>
-                                                            <a href="/shop">Shop now</a>
-                                                        </div>
+                                                        <img src="assets/imgs/banner/g4.jpg"  style="height:200px;width:260px"   alt="menu_banner1">
+                                                      
                                                     </div>
-                                                    <div class="header-banner2">
-                                                        <img src="assets/imgs/banner/menu-banner-3.jpg" alt="menu_banner2">
-                                                        <div class="banne_info">
-                                                            <h6>15% Off</h6>
-                                                            <h4>Hot Deals</h4>
-                                                            <a href="/shop">Shop now</a>
-                                                        </div>
-                                                    </div>
+                                                   
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="has-children">
-                                        <a href="/shop"><i class="evara-font-tshirt"></i>Men's Clothing</a>
+                                        <a href="/shop">Jewellery</a>
                                         <div class="dropdown-menu">
                                             <ul class="mega-menu d-lg-flex">
                                                 <li class="mega-menu-col col-lg-7">
                                                     <ul class="d-lg-flex">
                                                         <li class="mega-menu-col col-lg-6">
                                                             <ul>
-                                                                <li><span class="submenu-title">Jackets & Coats</span></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Down Jackets</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Jackets</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Parkas</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Faux Leather Coats</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Trench</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Wool & Blends</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Vests & Waistcoats</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Leather Coats</a></li>
+                                                              
+                                                                <li><span class="submenu-title">Neck Accessories</span></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Pendant</a></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Choker</a></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Chain</a></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Locket</a></li>
                                                             </ul>
                                                         </li>
                                                         <li class="mega-menu-col col-lg-6">
-                                                            <ul>
-                                                                <li><span class="submenu-title">Suits & Blazers</span></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Blazers</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Suit Jackets</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Suit Pants</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Suits</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Vests</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Tailor-made Suits</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Cover-Ups</a></li>
+                                                            <ul>  
+                                                                 <li><span class="submenu-title">Hand Accessories</span></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Bracelet</a></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Ring</a></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Bangels</a></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Wrist Cuff</a></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </li>
                                                 <li class="mega-menu-col col-lg-5">
                                                     <div class="header-banner2">
-                                                        <img src="assets/imgs/banner/menu-banner-4.jpg" alt="menu_banner1">
-                                                        <div class="banne_info">
-                                                            <h6>10% Off</h6>
-                                                            <h4>New Arrival</h4>
-                                                            <a href="shop">Shop now</a>
-                                                        </div>
+                                                        <img src="assets/imgs/banner/banner-17.webp" style="height:200px;" alt="menu_banner1">
+                                                        
                                                     </div>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="has-children">
-                                        <a href="/shop"><i class="evara-font-smartphone"></i> Cellphones</a>
-                                        <div class="dropdown-menu">
-                                            <ul class="mega-menu d-lg-flex">
-                                                <li class="mega-menu-col col-lg-7">
-                                                    <ul class="d-lg-flex">
-                                                        <li class="mega-menu-col col-lg-6">
-                                                            <ul>
-                                                                <li><span class="submenu-title">Hot & Trending</span></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Cellphones</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">iPhones</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Refurbished Phones</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Mobile Phone</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Mobile Phone Parts</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Phone Bags & Cases</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Communication Equipments</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Walkie Talkie</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="mega-menu-col col-lg-6">
-                                                            <ul>
-                                                                <li><span class="submenu-title">Accessories</span></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Screen Protectors</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Wire Chargers</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Wireless Chargers</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Car Chargers</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Power Bank</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Armbands</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Dust Plug</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Signal Boosters</a></li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="mega-menu-col col-lg-5">
-                                                    <div class="header-banner2">
-                                                        <img src="assets/imgs/banner/menu-banner-5.jpg" alt="menu_banner1">
-                                                        <div class="banne_info">
-                                                            <h6>10% Off</h6>
-                                                            <h4>New Arrival</h4>
-                                                            <a href="/shop">Shop now</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="header-banner2">
-                                                        <img src="assets/imgs/banner/menu-banner-6.jpg" alt="menu_banner2">
-                                                        <div class="banne_info">
-                                                            <h6>15% Off</h6>
-                                                            <h4>Hot Deals</h4>
-                                                            <a href="/shop">Shop now</a>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li><a href="/shop"><i class="evara-font-desktop"></i>Computer & Office</a></li>
-                                    <li><a href="/shop"><i class="evara-font-cpu"></i>Consumer Electronics</a></li>
-                                    <li><a href="/shop"><i class="evara-font-diamond"></i>Jewelry & Accessories</a></li>
-                                    <li><a href="/shop"><i class="evara-font-home"></i>Home & Garden</a></li>
-                                    <li><a href="/shop"><i class="evara-font-high-heels"></i>Shoes</a></li>
-                                    <li><a href="/shop"><i class="evara-font-teddy-bear"></i>Mother & Kids</a></li>
-                                    <li><a href="/shop"><i class="evara-font-kite"></i>Outdoor fun</a></li>
-                                    <li>
+                                   
+                                                 
+                                                   
+                                
                                         <ul class="more_slide_open" style="display: none;">
                                             <li><a href="/shop"><i class="evara-font-desktop"></i>Beauty, Health</a></li>
                                             <li><a href="/shop"><i class="evara-font-cpu"></i>Bags and Shoes</a></li>
@@ -494,42 +434,42 @@
                                     </li>
                                      
                                             
-                                    <li class="position-static"><a href="shop">Shop <i class="fi-rs-angle-down"></i></a>
+                                    <li class="position-static"><a href="/shop">Shop <i class="fas fa-angle-double-down"></i></a>
                                         <ul class="mega-menu">
                                             <li class="sub-mega-menu sub-mega-menu-width-22">
-                                                <a class="menu-title" href="#">Handbags</a>
+                                                <a class="menu-title" href="/shop">Cosmetics</a>
                                                 <ul>
-                                                    <li><a href="shop-product-right.html">Dresses</a></li>
-                                                    <li><a href="shop-product-right.html">Blouses & Shirts</a></li>
-                                                    <li><a href="shop-product-right.html">Hoodies & Sweatshirts</a></li>
-                                                    <li><a href="shop-product-right.html">Wedding Dresses</a></li>
-                                                    <li><a href="shop-product-right.html">Prom Dresses</a></li>
-                                                    <li><a href="shop-product-right.html">Cosplay Costumes</a></li>
+                                                    <li><a href="/shop">Dresses</a></li>
+                                                    <li><a href="/shop">Blouses & Shirts</a></li>
+                                                    <li><a href="/shop">Hoodies & Sweatshirts</a></li>
+                                                    <li><a href="/shop">Wedding Dresses</a></li>
+                                                    <li><a href="/shop">Prom Dresses</a></li>
+                                                    <li><a href="/shop">Cosplay Costumes</a></li>
                                                 </ul>
                                             </li>
                                             <li class="sub-mega-menu sub-mega-menu-width-22">
-                                                <a class="menu-title" href="#">Cosmetics</a>
+                                                <a class="menu-title" href="/shop">Jewellery</a>
                                                 <ul>
-                                                    <li><a href="shop-product-right.html">Jackets</a></li>
-                                                    <li><a href="shop-product-right.html">Casual Faux Leather</a></li>
-                                                    <li><a href="shop-product-right.html">Genuine Leather</a></li>
-                                                    <li><a href="shop-product-right.html">Casual Pants</a></li>
-                                                    <li><a href="shop-product-right.html">Sweatpants</a></li>
-                                                    <li><a href="shop-product-right.html">Harem Pants</a></li>
+                                                    <li><a href="/shop">Jackets</a></li>
+                                                    <li><a href="/shop">Casual Faux Leather</a></li>
+                                                    <li><a href="/shop">Genuine Leather</a></li>
+                                                    <li><a href="/shop">Casual Pants</a></li>
+                                                    <li><a href="/shop">Sweatpants</a></li>
+                                                    <li><a href="/shop">Harem Pants</a></li>
                                                 </ul>
                                             </li>
                                           
                                             <li class="sub-mega-menu sub-mega-menu-width-34">
                                                 <div class="menu-banner-wrap">
-                                                    <a href="shop-product-right.html"><img src="assets/imgs/banner/menu-banner.jpg" alt="Evara"></a>
+                                                    <a href="/shop"><img src="assets/imgs/banner/i3.webp" alt="Evara"></a>
                                                     <div class="menu-banner-content">
                                                         <h4>Hot deals</h4>
                                                         <h3>Don't miss<br> Trending</h3>
                                                         <div class="menu-banner-price">
-                                                            <span class="new-price text-success">Save to 50%</span>
+                                                            <span class="new-price text-primary">Save to 50%</span>
                                                         </div>
                                                         <div class="menu-banner-btn">
-                                                            <a href="shop-product-right.html">Shop now</a>
+                                                            <a href="/shop">Shop now</a>
                                                         </div>
                                                     </div>
                                                     <div class="menu-banner-discount">
@@ -542,15 +482,15 @@
                                         </ul>
                                     </li>
                                    
-                                    <li><a href="#">Pages <i class="fi-rs-angle-down"></i></a>
+                                    <li><a href="#">Pages <i class="fas fa-angle-double-down"></i></a>
                                         <ul class="sub-menu">
-                                            <li><a href="page-about.html">About Us</a></li>
+                                            <li><a href="/about">About Us</a></li>
                                             <li><a href="/contact">Contact</a></li>
                                             <li><a href="/account">My Account</a></li>
                                             <li><a href="/userlogin">login/register</a></li>
                                             <li><a href="page-purchase-guide.html">Purchase Guide</a></li>
-                                            <li><a href="page-privacy-policy.html">Privacy Policy</a></li>
-                                            <li><a href="page-terms.html">Terms of Service</a></li>
+                                            <li><a href="/privacypolicy">Privacy Policy</a></li>
+                                            <li><a href="/terms">Terms of Service</a></li>
                                             <li><a href="/404">404 Page</a></li>
                                         </ul>
                                     </li>
@@ -562,12 +502,189 @@
                         </div>
                     </div>
                     <div class="hotline d-none d-lg-block">
-                        <p><i class="fi-rs-headset"></i><span>Hotline</span> 18900 807 77 </p>
+                        <p><i class="fas fa-phone-alt"></i><span>Hotline</span> 18900 807 77 </p>
+                    </div>
+                    <p class="mobile-promotion">Happy <span class="text-brand">Mother's Day</span>. Big Sale Up to 40%</p>
+                    <div class="header-action-right d-block d-lg-none">
+                        <div class="header-action-2">
+                            <div class="header-action-icon-2">
+                                <a href="/wishlist">
+                                    <img alt="Evara" src="assets/imgs/theme/icons/icon-heart.svg">
+                                    <span class="pro-count white">4</span>
+                                </a>
+                            </div>
+                            <div class="header-action-icon-2">
+                                <a class="mini-cart-icon" href="/cart">
+                                    <img alt="Evara" src="assets/imgs/theme/icons/icon-cart.svg">
+                                    <span class="pro-count white">2</span>
+                                </a>
+                                <div class="cart-dropdown-wrap cart-dropdown-hm2">
+                                    <ul>
+                                        <li>
+                                            <div class="shopping-cart-img">
+                                                <a href="/shop"><img alt="Evara" src="assets/imgs/shop/thumbnail-3.jpg"></a>
+                                            </div>
+                                            <div class="shopping-cart-title">
+                                                <h4><a href="/shop">Plain Striola Shirts</a></h4>
+                                                <h3><span>1 × </span>$800.00</h3>
+                                            </div>
+                                            <div class="shopping-cart-delete">
+                                                <a href="#"><i class="fi-rs-cross-small"></i></a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="shopping-cart-img">
+                                                <a href="/shop"><img alt="Evara" src="assets/imgs/shop/thumbnail-4.jpg"></a>
+                                            </div>
+                                            <div class="shopping-cart-title">
+                                                <h4><a href="/shop">Macbook Pro 2022</a></h4>
+                                                <h3><span>1 × </span>$3500.00</h3>
+                                            </div>
+                                            <div class="shopping-cart-delete">
+                                                <a href="#"><i class="fi-rs-cross-small"></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="shopping-cart-footer">
+                                        <div class="shopping-cart-total">
+                                            <h4>Total <span>$383.00</span></h4>
+                                        </div>
+                                        <div class="shopping-cart-button">
+                                            <a href="/cart">View cart</a>
+                                            <a href="/checkout">Checkout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-action-icon-2 d-block d-lg-none">
+                                <div class="burger-icon burger-icon-white">
+                                    <span class="burger-icon-top"></span>
+                                    <span class="burger-icon-mid"></span>
+                                    <span class="burger-icon-bottom"></span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    <div class="mobile-header-active mobile-header-wrapper-style">
+        <div class="mobile-header-wrapper-inner">
+            <div class="mobile-header-top">
+                <div class="mobile-header-logo">
+                   <a href="/" style="display:inline-block;">
+  <img src="assets/imgs/theme/nl.png" alt="logo" style="width:200px; height:80px">
+</a>
+
+                </div>
+                <div class="mobile-menu-close close-style-wrap close-style-position-inherit">
+                    <button class="close-style search-close">
+                        <i class="icon-top"></i>
+                        <i class="icon-bottom"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile-header-content-area">
+                <div class="mobile-search search-style-3 mobile-header-border">
+                    <form action="#">
+                        <input type="text" placeholder="Search for items…">
+                        <button type="submit"><i class="fi-rs-search"></i></button>
+                    </form>
+                </div>
+                <div class="mobile-menu-wrap mobile-header-border">
+                    <div class="main-categori-wrap mobile-header-border">
+                        <a class="categori-button-active-2" href="#">
+                            <span class="fas fa-list"></span> Browse Categories
+                        </a>
+                        <div class="categori-dropdown-wrap categori-dropdown-active-small">
+                            <ul>
+                                <li><a href="/shop">Cosmetics</a></li>
+                                <li><a href="/shop">Jewellry</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- mobile menu start -->
+                    <nav>
+                        <ul class="mobile-menu">
+                              <li>
+                                        <a href="/">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="page-about.html">About</a>
+                                    </li>
+                           
+                           <li class="position-static"><a href="/shop">Shop <i class="fas fa-angle-double-down"></i></a>
+                                        <ul class="mega-menu">
+                                            <li class="sub-mega-menu sub-mega-menu-width-22">
+                                                <a class="menu-title" href="/shop">Cosmetics</a>
+                                                <ul>
+                                                    <li><a href="/shop">Dresses</a></li>
+                                                    <li><a href="/shop">Blouses & Shirts</a></li>
+                                                    <li><a href="/shop">Hoodies & Sweatshirts</a></li>
+                                                    <li><a href="/shop">Wedding Dresses</a></li>
+                                                    <li><a href="/shop">Prom Dresses</a></li>
+                                                    <li><a href="/shop">Cosplay Costumes</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="sub-mega-menu sub-mega-menu-width-22">
+                                                <a class="menu-title" href="/shop">Jewellery</a>
+                                                <ul>
+                                                    <li><a href="/shop">Jackets</a></li>
+                                                    <li><a href="/shop">Casual Faux Leather</a></li>
+                                                    <li><a href="/shop">Genuine Leather</a></li>
+                                                    <li><a href="/shop">Casual Pants</a></li>
+                                                    <li><a href="/shop">Sweatpants</a></li>
+                                                    <li><a href="/shop">Harem Pants</a></li>
+                                                </ul>
+                                            </li>
+                                          
+                                            
+                                   
+                                    
+                                  
+                                   
+                           
+                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="/about">About Us</a></li>
+                                    <li><a href="/contact">Contact</a></li>
+                                    <li><a href="/account">My Account</a></li>
+                                    <li><a href="/userlogin">login/register</a></li>
+                                    <li><a href="page-purchase-guide.html">Purchase Guide</a></li>
+                                    <li><a href="/privacypolicy">Privacy Policy</a></li>
+                                    <li><a href="/terms">Terms of Service</a></li>
+                                    <li><a href="/404">404 Page</a></li>
+                                </ul>
+                            </li>
+      
+                        </ul>
+                    </nav>
+                    <!-- mobile menu end -->
+                </div>
+                <div class="mobile-header-info-wrap mobile-header-border">
+                    <div class="single-mobile-header-info mt-30">
+                        <a href="/contact"> Our location </a>
+                    </div>
+                    <div class="single-mobile-header-info">
+                        <a href="/userlogin">Log In / Sign Up </a>
+                    </div>
+                    <div class="single-mobile-header-info">
+                        <a href="#">(+01) - 2345 - 6789 </a>
+                    </div>
+                </div>
+                <div class="mobile-social-icon">
+                    <h5 class="mb-15 text-grey-4">Follow Us</h5>
+                    <a href="#"><img src="assets/imgs/theme/icons/icon-facebook.svg" alt=""></a>
+                    <a href="#"><img src="assets/imgs/theme/icons/icon-twitter.svg" alt=""></a>
+                    <a href="#"><img src="assets/imgs/theme/icons/icon-instagram.svg" alt=""></a>
+                    <a href="#"><img src="assets/imgs/theme/icons/icon-pinterest.svg" alt=""></a>
+                    <a href="#"><img src="assets/imgs/theme/icons/icon-youtube.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- MAIN CONTENT SECTION -->
     @yield('content')
@@ -618,23 +735,34 @@
                             </p>
                             <h5 class="mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated">Follow Us</h5>
                             <div class="mobile-social-icon wow fadeIn animated mb-sm-5 mb-md-0">
-                                <a href="#"><img src="assets/imgs/theme/icons/icon-facebook.svg" alt=""></a>
-                                <a href="#"><img src="assets/imgs/theme/icons/icon-twitter.svg" alt=""></a>
-                                <a href="#"><img src="assets/imgs/theme/icons/icon-instagram.svg" alt=""></a>
-                                <a href="#"><img src="assets/imgs/theme/icons/icon-pinterest.svg" alt=""></a>
-                                <a href="#"><img src="assets/imgs/theme/icons/icon-youtube.svg" alt=""></a>
-                            </div>
+    <a href="https://www.facebook.com/login" target="_blank" rel="noopener">
+        <img src="assets/imgs/theme/icons/icon-facebook.svg" alt="Facebook Login">
+    </a>
+    <a href="https://twitter.com/login" target="_blank" rel="noopener">
+        <img src="assets/imgs/theme/icons/icon-twitter.svg" alt="Twitter Login">
+    </a>
+    <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener">
+        <img src="assets/imgs/theme/icons/icon-instagram.svg" alt="Instagram Login">
+    </a>
+    <a href="https://www.pinterest.com/login/" target="_blank" rel="noopener">
+        <img src="assets/imgs/theme/icons/icon-pinterest.svg" alt="Pinterest Login">
+    </a>
+    <a href="https://accounts.google.com/ServiceLogin?service=youtube" target="_blank" rel="noopener">
+        <img src="assets/imgs/theme/icons/icon-youtube.svg" alt="YouTube Login">
+    </a>
+</div>
+
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-3">
                         <h5 class="widget-title wow fadeIn animated">About</h5>
                         <ul class="footer-list wow fadeIn animated mb-sm-5 mb-md-0">
-                            <li><a href="#">About Us</a></li>
+                            <li><a href="/about">About Us</a></li>
                             <li><a href="#">Delivery Information</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms &amp; Conditions</a></li>
+                            <li><a href="/privacypolicy">Privacy Policy</a></li>
+                            <li><a href="/terms">Terms &amp; Conditions</a></li>
                             <li><a href="/contact">Contact Us</a></li>
-                            <li><a href="#">Support Center</a></li>
+                            <li><a href="/support">Support Center</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2  col-md-3">
@@ -725,5 +853,78 @@
 
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"949743bf0f2d8e3a","version":"2025.5.0","r":1,"token":"3aa9a3481f734e94bceb8bb1bd648ba1","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}'
         crossorigin="anonymous"></script>
+        <!-- Geo Location Starts -->
+
+  <script>
+    $(document).ready(function () {
+      function updateDateTimeAndLocation() {
+        const date = new Date();
+        const dateString = date.toLocaleDateString(); // Get the date in MM/DD/YYYY format
+        const timeString = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }); // Get time in HH:MM:SS format
+        const dayString = date.toLocaleDateString('en-US', { weekday: 'long' }); // Get the day of the week
+
+        getLocationAndUpdateFooter(dayString, dateString, timeString);
+      }
+
+      function getLocationAndUpdateFooter(dayString, dateString, timeString) {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            function (position) {
+              const latitude = position.coords.latitude;
+              const longitude = position.coords.longitude;
+
+              getCityAndCountry(latitude, longitude, function (cityName, countryCode) {
+                getFullCountryName(countryCode, function (countryName) {
+                  $('#footer').text(`${dayString}, ${dateString} ${timeString}, ${cityName}, ${countryName}`);
+                });
+              });
+            },
+            function (error) {
+              console.error('Geolocation error:', error.message);
+              $('#footer').text(`${dayString}, ${dateString} ${timeString} - Location access denied`);
+            }
+          );
+        } else {
+          console.error('Geolocation not supported by this browser.');
+          $('#footer').text(`${dayString}, ${dateString} ${timeString} - Geolocation not supported`);
+        }
+      }
+
+      function getCityAndCountry(latitude, longitude, callback) {
+        const apiKey = '2ac73c9436104aef95b307fc30de7bdc'; // Replace with your OpenWeatherMap API key
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+
+        $.get(url, function (data) {
+          console.log('OpenWeatherMap API response:', data);
+          if (data && data.name && data.sys && data.sys.country) {
+            callback(data.name, data.sys.country); // City name and country code
+          } else {
+            callback('City not found', 'Country not found');
+          }
+        }).fail(function () {
+          console.error('Failed to fetch data from OpenWeatherMap API.');
+          callback('API error', 'API error');
+        });
+      }
+
+      function getFullCountryName(countryCode, callback) {
+        const url = `https://restcountries.com/v3.1/alpha/${countryCode}`;
+        $.get(url, function (data) {
+          console.log('REST Countries API response:', data);
+          if (data && data[0] && data[0].name && data[0].name.common) {
+            callback(data[0].name.common); // Full country name
+          } else {
+            callback('Country not found');
+          }
+        }).fail(function () {
+          console.error('Failed to fetch data from REST Countries API.');
+          callback('API error');
+        });
+      }
+      updateDateTimeAndLocation();
+      setInterval(updateDateTimeAndLocation, 1000);
+    });
+  </script>
+  <!-- Geo Location Ends -->
 </body>
 </html>
