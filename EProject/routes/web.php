@@ -32,7 +32,10 @@ Route::get('/wishlist', function () {
 });
 
 Route::get('/shop', function () {
-    return view('User.shop-grid-right');
+    return view('User.shop-cosmetics');
+});
+Route::get('/shopjewel', function () {
+    return view('User.shop-jewelry');
 });
 
 // ========USER CONTROLLER ROUTES==========

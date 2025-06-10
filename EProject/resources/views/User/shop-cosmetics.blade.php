@@ -690,7 +690,7 @@
             <div class="container">
                 <div class="breadcrumb">
                     <a href="index.html" rel="nofollow">Home</a>
-                    <span></span> Shop
+                    <span></span> Shop Cosmetics
                 </div>
             </div>
         </div>
@@ -700,7 +700,7 @@
                     <div class="col-lg-9">
                         <div class="shop-product-fillter">
                             <div class="totall-product">
-                                <p> We found <strong class="text-brand">688</strong> items for you!</p>
+                                <p> We found <strong class="text-brand">these</strong> items for you!</p>
                             </div>
                             <div class="sort-by-product-area">
                                 <div class="sort-by-cover mr-10">
@@ -743,6 +743,10 @@
                                 </div>
                             </div>
                         </div>
+                         <div>
+                            <h3 class="category-title">Foundation</h3>
+                        </div>
+                        <br>
                         <div class="row product-grid-3">
                             <div class="col-lg-4 col-md-4 col-12 col-sm-6">
                                 <div class="product-cart-wrap mb-30" data-id="product-3">
@@ -861,6 +865,11 @@
                                     </div>
                                 </div>
                             </div>
+                             <div>
+                            <h3 class="category-title">Blushon</h3>
+                        </div>
+                        <br>
+                        <br>
                             <div class="col-lg-4 col-md-4 col-12 col-sm-6">
                                 <div class="product-cart-wrap mb-30" data-id="product-6">
                                     <div class="product-img-action-wrap">
@@ -978,6 +987,11 @@
                                     </div>
                                 </div>
                             </div>
+                             <div>
+                            <h3 class="category-title">Mascara</h3>
+                        </div>
+                        <br>
+                        <br>
                             <div class="col-lg-4 col-md-4 col-12 col-sm-6">
                                 <div class="product-cart-wrap mb-30" data-id="product-9">
                                     <div class="product-img-action-wrap">
@@ -1088,6 +1102,11 @@
                                     </div>
                                 </div>
                             </div>
+                             <div>
+                            <h3 class="category-title">EyeLiner</h3>
+                        </div>
+                        <br>
+                        <br>
                             <div class="col-lg-4 col-md-4 col-12 col-sm-6">
                                 <div class="product-cart-wrap mb-30" data-id="product-11">
                                     <div class="product-img-action-wrap">
