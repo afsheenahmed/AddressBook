@@ -16,7 +16,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/main.css?v=3.4">
-
+    <style>
+        .wishlist-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 15px;
+        }
+        .wishlist-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .wishlist-item-details {
+            flex: 1;
+        }
+        .wishlist-item-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .empty-wishlist {
+            text-align: center;
+            padding: 50px;
+            font-size: 18px;
+            color: #777;
+        }
+    </style>
 </head>
 
 <body>
@@ -677,6 +705,7 @@
                 <div class="mobile-social-icon">
                     <h5 class="mb-15 text-grey-4">Follow Us</h5>
                     <a href="#"><img src="assets/imgs/theme/icons/icon-facebook.svg" alt=""></a>
+                   <a href="#"><img src="assets/imgs/theme/icons/icon-facebook.svg" alt=""></a>
                     <a href="#"><img src="assets/imgs/theme/icons/icon-twitter.svg" alt=""></a>
                     <a href="#"><img src="assets/imgs/theme/icons/icon-instagram.svg" alt=""></a>
                     <a href="#"><img src="assets/imgs/theme/icons/icon-pinterest.svg" alt=""></a>
@@ -917,261 +946,114 @@
     <script src="./assets/js/shop.js?v=3.4"></script>
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9497d7ac3e1de8c7","version":"2025.5.0","r":1,"token":"3aa9a3481f734e94bceb8bb1bd648ba1","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}'
         crossorigin="anonymous"></script>
-        
-            
-
-
-<script>
+        <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Load wishlist from localStorage
+    // Initialize wishlist from localStorage
     let wishlist = JSON.parse(localStorage.getItem('evara-wishlist')) || [];
-    const wishlistContainer = document.getElementById('wishlist-items');
-    const moveAllToCartBtn = document.getElementById('move-all-to-cart');
     
-    // Render wishlist items
+    // Function to render wishlist items
     function renderWishlist() {
-        // Clear existing items
-        wishlistContainer.innerHTML = '';
+        const wishlistTable = document.querySelector('.shopping-summery tbody');
         
-        // Handle empty wishlist
+        if (!wishlistTable) return;
+        
+        // Clear existing static rows
+        wishlistTable.innerHTML = '';
+        
         if (wishlist.length === 0) {
-            wishlistContainer.innerHTML = `
+            wishlistTable.innerHTML = `
                 <tr>
-                    <td colspan="6">
-                        <div class="empty-wishlist">
-                            <i class="fi-rs-heart"></i>
-                            <h4>Your wishlist is empty</h4>
-                            <p>You don't have any products in your wishlist yet.</p>
-                            <a href="/shop" class="btn mt-3">Start Shopping</a>
-                        </div>
+                    <td colspan="6" class="empty-wishlist">
+                        Your wishlist is empty. Start adding some products!
                     </td>
                 </tr>
             `;
-            moveAllToCartBtn.style.display = 'none';
             return;
         }
         
         // Add each wishlist item to the table
-        wishlist.forEach((item, index) => {
+        wishlist.forEach(item => {
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td class="image product-thumbnail">
-                    <img src="${item.image || 'assets/imgs/shop/product-default.jpg'}" 
-                         alt="${item.name}" 
-                         onerror="this.src='assets/imgs/shop/product-default.jpg'">
+                <td class="image product-thumbnail"><img src="${item.image}" alt="${item.name}"></td>
+                <td class="product-des product-name">
+                    <h5 class="product-name"><a href="shop-product-right.html">${item.name}</a></h5>
                 </td>
-                <td class="product-des product-name" data-label="Product">
-                    <h5 class="product-name">
-                        <a href="shop-product-right.html">${item.name}</a>
-                    </h5>
-                    <p class="font-xs">${item.description || ''}</p>
+                <td class="price" data-title="Price"><span>$${item.price.toFixed(2)}</span></td>
+                <td class="text-center" data-title="Stock">
+                    <span class="color3 font-weight-bold">${item.inStock ? 'In Stock' : 'Out of Stock'}</span>
                 </td>
-                <td class="price" data-label="Price">
-                    <span>$${(item.price || 0).toFixed(2)}</span>
-                </td>
-                <td class="text-center" data-label="Stock">
-                    <span class="stock-status ${item.inStock ? 'in-stock' : 'out-of-stock'}">
-                        ${item.inStock ? 'In Stock' : 'Out of stock'}
-                    </span>
-                </td>
-                <td class="text-right" data-label="Action">
-                    <button class="btn btn-sm add-to-cart" data-index="${index}" ${item.inStock ? '' : 'disabled'}>
-                        <i class="fi-rs-shopping-bag mr-5"></i>
-                        ${item.inStock ? 'Add to cart' : 'Notify Me'}
+                <td class="text-right" data-title="Cart">
+                    <button class="btn btn-sm add-to-cart-from-wishlist" data-id="${item.id}">
+                        <i class="fi-rs-shopping-bag mr-5"></i>Add to cart
                     </button>
                 </td>
-                <td class="action" data-label="Remove">
-                    <a href="#" class="remove-item" data-index="${index}">
+                <td class="action" data-title="Remove">
+                    <a href="#" class="remove-from-wishlist" data-id="${item.id}">
                         <i class="fi-rs-trash"></i>
                     </a>
                 </td>
             `;
-            wishlistContainer.appendChild(row);
+            wishlistTable.appendChild(row);
         });
         
-        // Show move all button if items exist
-        moveAllToCartBtn.style.display = 'inline-block';
-        
-        // Attach event listeners
-        attachWishlistEvents();
-    }
-    
-    // Save wishlist to localStorage and update UI
-    function saveWishlist() {
-        localStorage.setItem('evara-wishlist', JSON.stringify(wishlist));
-        updateWishlistCount();
-        renderWishlist();
-    }
-    
-    // Update wishlist count in header
-    function updateWishlistCount() {
-        const count = wishlist.length;
-        document.querySelectorAll('.pro-count').forEach(el => {
-            if (el.closest('[href="/wishlist"]')) {
-                el.textContent = count;
-            }
-        });
-    }
-    
-    // Move item to cart
-    function moveToCart(item) {
-        // Get existing cart or create new one
-        let cart = JSON.parse(localStorage.getItem('evara-cart')) || [];
-        
-        // Check if item already exists in cart
-        const existingItem = cart.find(cartItem => cartItem.id === item.id);
-        
-        if (existingItem) {
-            existingItem.quantity += 1;
-        } else {
-            cart.push({
-                ...item,
-                quantity: 1
-            });
-        }
-        
-        localStorage.setItem('evara-cart', JSON.stringify(cart));
-        
-        // Update cart count in header
-        const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-        document.querySelectorAll('.pro-count').forEach(el => {
-            if (el.closest('[href="/cart"]')) {
-                el.textContent = totalItems;
-            }
-        });
-    }
-    
-    // Attach event listeners to wishlist elements
-    function attachWishlistEvents() {
-        // Remove item
-        document.querySelectorAll('.remove-item').forEach(btn => {
+        // Add event listeners for the new buttons
+        document.querySelectorAll('.remove-from-wishlist').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
-                const index = parseInt(this.dataset.index);
-                wishlist.splice(index, 1);
-                saveWishlist();
-                
-                // Show success message
-                showToast('Item removed from wishlist');
+                const id = this.getAttribute('data-id');
+                wishlist = wishlist.filter(item => item.id !== id);
+                localStorage.setItem('evara-wishlist', JSON.stringify(wishlist));
+                renderWishlist();
+                updateWishlistCount();
             });
         });
         
-        // Add to cart
-        document.querySelectorAll('.add-to-cart').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                const index = parseInt(this.dataset.index);
-                const item = wishlist[index];
+        document.querySelectorAll('.add-to-cart-from-wishlist').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const id = this.getAttribute('data-id');
+                const product = wishlist.find(item => item.id === id);
                 
-                if (item.inStock) {
-                    moveToCart(item);
-                    showToast('Item added to cart');
-                } else {
-                    // Handle out of stock notification
-                    showToast('This item is out of stock', 'warning');
-                }
-            });
-        });
-        
-        // Move all to cart
-        if (moveAllToCartBtn) {
-            moveAllToCartBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Filter only in-stock items
-                const inStockItems = wishlist.filter(item => item.inStock);
-                
-                if (inStockItems.length === 0) {
-                    showToast('No in-stock items to move to cart', 'warning');
-                    return;
-                }
-                
-                // Move all in-stock items to cart
-                let cart = JSON.parse(localStorage.getItem('evara-cart')) || [];
-                
-                inStockItems.forEach(item => {
-                    const existingItem = cart.find(cartItem => cartItem.id === item.id);
+                if (product) {
+                    // Initialize cart from localStorage
+                    let cart = JSON.parse(localStorage.getItem('evara-cart')) || [];
+                    
+                    // Check if product already in cart
+                    const existingItem = cart.find(item => item.id === product.id);
                     
                     if (existingItem) {
                         existingItem.quantity += 1;
                     } else {
                         cart.push({
-                            ...item,
-                            quantity: 1
+                            ...product,
+                            quantity: 1,
+                            color: '',
+                            size: ''
                         });
                     }
                     
-                    // Remove from wishlist
-                    wishlist = wishlist.filter(wishItem => wishItem.id !== item.id);
-                });
-                
-                localStorage.setItem('evara-cart', JSON.stringify(cart));
-                saveWishlist();
-                
-                // Update cart count in header
-                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-                document.querySelectorAll('.pro-count').forEach(el => {
-                    if (el.closest('[href="/cart"]')) {
-                        el.textContent = totalItems;
-                    }
-                });
-                
-                showToast(`${inStockItems.length} items moved to cart`);
+                    localStorage.setItem('evara-cart', JSON.stringify(cart));
+                    alert('Product added to cart!');
+                    
+                    // You might want to update the cart count in the header here
+                    // You can call the existing updateCartCount() function from your cart script
+                }
             });
-        }
+        });
     }
     
-    // Show toast notification
-    function showToast(message, type = 'success') {
-        // Implement your toast notification system here
-        // This could use a library like Toastify.js or a custom solution
-        console.log(`${type}: ${message}`);
+    // Update wishlist count in header
+    function updateWishlistCount() {
+        const count = wishlist.length;
+        document.querySelectorAll('.wishlist-count').forEach(el => {
+            el.textContent = count;
+        });
     }
-    
+
     // Initial render
     renderWishlist();
+    updateWishlistCount();
 });
-
-// Helper function to add item to wishlist (can be called from product pages)
-function addToWishlist(product) {
-    let wishlist = JSON.parse(localStorage.getItem('evara-wishlist')) || [];
-    
-    // Check if product already exists in wishlist
-    const exists = wishlist.some(item => item.id === product.id);
-    
-    if (!exists) {
-        wishlist.push({
-            id: product.id || Date.now(),
-            name: product.name || 'Unnamed Product',
-            price: product.price || 0,
-            image: product.image || 'assets/imgs/shop/product-default.jpg',
-            inStock: product.inStock !== undefined ? product.inStock : true,
-            description: product.description || ''
-        });
-        
-        localStorage.setItem('evara-wishlist', JSON.stringify(wishlist));
-        
-        // Update wishlist count in header
-        updateWishlistCount();
-        
-        return true;
-    }
-    return false;
-}
-
-// Helper function to update wishlist count in header
-function updateWishlistCount() {
-    const wishlist = JSON.parse(localStorage.getItem('evara-wishlist')) || [];
-    const count = wishlist.length;
-    
-    document.querySelectorAll('.pro-count').forEach(el => {
-        if (el.closest('[href="/wishlist"]')) {
-            el.textContent = count;
-        }
-    });
-}
 </script>
-        
-</body>
-
-</html>
+    </body>
+    </html>

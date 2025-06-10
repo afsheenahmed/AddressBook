@@ -752,7 +752,7 @@
                         
                         <div class="row product-grid-3">
                             <div class="col-lg-4 col-md-4 col-12 col-sm-6">
-                                <div class="product-cart-wrap mb-30" data-id="product-3">
+                                <div class="product-cart-wrap mb-30" data-id="product-23">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
                                             <a href="shop-product-right.html">
@@ -791,7 +791,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-12 col-sm-6">
-                                <div class="product-cart-wrap mb-30" data-id="product-4">
+                                <div class="product-cart-wrap mb-30" data-id="product-24">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
                                             <a href="shop-product-right.html">
@@ -830,7 +830,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-12 col-sm-6">
-                                <div class="product-cart-wrap mb-30" data-id="product-5">
+                                <div class="product-cart-wrap mb-30" data-id="product-25">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
                                             <a href="shop-product-right.html">
@@ -874,7 +874,7 @@
                         <br>
                         <br>
                             <div class="col-lg-4 col-md-4 col-12 col-sm-6">
-                                <div class="product-cart-wrap mb-30" data-id="product-6">
+                                <div class="product-cart-wrap mb-30" data-id="product-26">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
                                             <a href="shop-product-right.html">
@@ -913,7 +913,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-12 col-sm-6">
-                                <div class="product-cart-wrap mb-30" data-id="product-7">
+                                <div class="product-cart-wrap mb-30" data-id="product-27">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
                                             <a href="shop-product-right.html">
@@ -953,7 +953,7 @@
                             </div>
                             
                             <div class="col-lg-4 col-md-4 col-12 col-sm-6">
-                                <div class="product-cart-wrap mb-30" data-id="product-8">
+                                <div class="product-cart-wrap mb-30" data-id="product-28">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
                                             <a href="shop-product-right.html">
@@ -997,7 +997,7 @@
                         <br>
                         <br>
                             <div class="col-lg-4 col-md-4 col-12 col-sm-6">
-                                <div class="product-cart-wrap mb-30" data-id="product-9">
+                                <div class="product-cart-wrap mb-30" data-id="product-29">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
                                             <a href="shop-product-right.html">
@@ -1035,7 +1035,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-12 col-sm-6">
-                                <div class="product-cart-wrap mb-30" data-id="product-10">
+                                <div class="product-cart-wrap mb-30" data-id="product-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
                                             <a href="shop-product-right.html">
@@ -1071,7 +1071,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-12 col-sm-6">
-                                <div class="product-cart-wrap mb-30"data-id="product-12">
+                                <div class="product-cart-wrap mb-30"data-id="product-32">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
                                             <a href="shop-product-right.html">
@@ -1114,7 +1114,7 @@
                         <br>
                         <br>
                             <div class="col-lg-4 col-md-4 col-12 col-sm-6">
-                                <div class="product-cart-wrap mb-30" data-id="product-11">
+                                <div class="product-cart-wrap mb-30" data-id="product-31">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
                                             <a href="shop-product-right.html">
@@ -1153,7 +1153,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-12 col-sm-6">
-                                <div class="product-cart-wrap mb-30" data-id="product-1">
+                                <div class="product-cart-wrap mb-30" data-id="product-41">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
                                             <a href="shop-product-right.html">
@@ -1194,7 +1194,7 @@
 
 
                             <div class="col-lg-4 col-md-4 col-12 col-sm-6">
-                                <div class="product-cart-wrap mb-30"  data-id="product-2">
+                                <div class="product-cart-wrap mb-30"  data-id="product-22">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
                                             <a href="shop-product-right.html">
