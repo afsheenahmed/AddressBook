@@ -9,24 +9,25 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    //
+    //Register Function
     public function register (Request $req)
 {
 $name = $req->username;
 $email = $req->useremail;
 $pass = $req->userpassword; 
-$role = $req->usertype; 
+
 
 $user = new User();
 $user->name=$name;
 $user->email=$email;
 $user->password=$pass;
-$user->role=$role;
+
 
 $user->save();
 return redirect()->back()->with('Message','Successfully Registered');
 }
-
+ 
+//Contact Function
     public function contactdata(Request $req)
     {
        
@@ -46,4 +47,5 @@ return redirect()->back()->with('Message','Successfully Registered');
        }
         return redirect('/contact')->with('success', 'Your message has been sent successfully!');
     }
+    
 }

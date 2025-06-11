@@ -16,14 +16,15 @@ return new class extends Migration
             $table->string('VendorName');
             $table->string('VendorEmail');
             $table->string('VendorPhone');
+           
             $table->string('VendorAddress');
             $table->string('VendorCity');
-            $table->string('VendorState');
-            $table->string('VendorZip');
+           
+            
             $table->string('VendorCountry');
-            $table->string('VendorContactPhone');
+            $table->string('VendorPassword');
             $table->string('VendorProfilePicture')->nullable();
-            $table->string('VendorStatus')->default('Not Approved');
+            $table->string('VendorStatus')->default('Pending');
             
             $table->timestamps();
         });

@@ -1,7 +1,12 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\VendorController;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+use App\Models\vendor;
 
 
 //========USER VIEW ROUTES==========
@@ -39,12 +44,16 @@ Route::get('/shopjewel', function () {
 });
 
 // ========USER CONTROLLER ROUTES==========
+
 Route::post('/contactadmin',[UserController::class, 'contactdata']);
 
 
 // ========ADMIN VIEW ROUTES==========
-Route::get('/admindashboard', function () {
-    return view('Admin.index');
+Route::get('/viewvendors', function () {
+    return view('Admin.page-vendors');
+});
+Route::get('/viewusers', function () {
+    return view('Admin.page-users');
 });
 Route::get('/viewproducts', function () {
     return view('Admin.page-products-list');
@@ -71,6 +80,33 @@ Route::get('/vieworder', function () {
     return view('Admin.vieworder');
 });
 // ========ADMIN CONTROLLER ROUTES==========
+ Route::get('/viewusers', [AdminController::class, 'getuser'])->name('Admin.viewusers');
+Route::post('/delete/{id}',[AdminController::class,('deleteuser')]);
+ Route::get('/viewvendors', [AdminController::class, 'getvendor'])->name('Admin.viewvendors');
+
+Route::post('/delete/{id}',[AdminController::class,('deletevendor')]);
+Route::post('/update/{id}',[AdminController::class,('updatevendor')]);
+
+
+
+
+
+
+
+// ========VENDOR VIEW ROUTES==========
+
+Route::get('/vendorregister', function () {
+    return view('Vendor.register');
+});
+
+
+
+
+
+
+// ========VENDOR CONTROLLER ROUTES==========
+Route::post('/addvendor',[VendorController::class,('register')]);
+
 
 
 
@@ -81,6 +117,25 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+
+ if(Auth::User()->role==='user')
+        {
+
+ return view('User.index');
+        
+        
+    }
+    else{
+
+    return view('Admin.index');
+    }
+
+       
     })->name('dashboard');
+    Route::get('/admindashboard', function () {
+    return view('Admin.index');
+});
+ 
+
+
 });

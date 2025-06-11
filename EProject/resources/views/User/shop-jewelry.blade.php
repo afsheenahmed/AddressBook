@@ -19,8 +19,93 @@
 
 </head>
 
-<body>
-   
+<body><style>
+    /* Hero Slider Image Responsiveness */
+    .home-slider {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .single-hero-slider {
+        width: 100%;
+    }
+    
+    .single-slider-img {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 50%; /* Adjust this percentage based on your desired aspect ratio */
+        overflow: hidden;
+    }
+    
+    .single-slider-img img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 1199px) {
+        .single-slider-img {
+            padding-bottom: 60%; /* Taller aspect ratio on smaller screens */
+        }
+    }
+    
+    @media (max-width: 991px) {
+        .single-slider-img {
+            padding-bottom: 70%;
+        }
+        
+        .hero-slider-content-2 {
+            padding: 20px;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .single-slider-img {
+            padding-bottom: 80%;
+        }
+        
+        .slider-animated-1 {
+            flex-direction: column;
+        }
+        
+        .hero-slider-content-2 {
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .col-lg-7.col-md-6.col-sm-12 {
+            order: -1; /* Image first on mobile */
+        }
+    }
+    
+    @media (max-width: 575px) {
+        .single-slider-img {
+            padding-bottom: 100%; /* Square aspect ratio on very small screens */
+        }
+    }
+    /* Ensure content shows on all screen sizes */
+@media (max-width: 768px) {
+    .hero-slider-content-2 {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    .slider-animated-1 .col-lg-5 {
+        order: 2; /* Content below image on mobile */
+    }
+    
+    .slider-animated-1 .col-lg-7 {
+        order: 1; /* Image above content on mobile */
+    }
+}
+</style>
     <!-- Modal -->
     <div class="modal fade custom-modal" id="onloadModal" tabindex="-1" aria-labelledby="onloadModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -33,8 +118,8 @@
                             <h5 style="font-weight: bold;">Limited quantities.</h5>
                         </div>
                         <div class="deal-content">
-                            <h6 style="font-weight: bold;" class="product-title"><a href="/shop">Summer Collection New Morden Design</a></h6>
-                            <div class="product-price"><span class="new-price">$139.00</span><span class="old-price" style="font-weight: bold;color: black ">$160.99</span></div>
+                            <h6 style="font-weight: bold;" class="product-title"><a href="/shopjewel">Summer Collection New Modern Design</h6>
+                            <div class="product-price"><span class="new-price">Pkr139.00</span><span class="old-price" style="font-weight: bold;color: black ">Pkr160.99</span></div>
                         </div>
                         <div class="deal-bottom">
                             <p style="font-weight: bold;"  >Hurry Up! Offer End In:</p>
@@ -57,7 +142,7 @@
   </span>
 </div>
 
-                            <a href="/shop" class="btn hover-up">Shop Now <i class="fi-rs-arrow-right"></i></a>
+                           <a href="/shopjewel" class="btn hover-up">Shop Now <i class="fi-rs-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -78,7 +163,7 @@
                                 <!-- MAIN SLIDES -->
                                 <div class="product-image-slider">
                                     <figure class="border-radius-10">
-                                        <img src="assets/imgs/shop/product-16-2.jpg" alt="product image">
+                                        <img src="assets/imgs/banner/" alt="product image">
                                     </figure>
                                     <figure class="border-radius-10">
                                         <img src="assets/imgs/shop/product-16-1.jpg" alt="product image">
@@ -138,8 +223,8 @@
                                 </div>
                                 <div class="clearfix product-price-cover">
                                     <div class="product-price primary-color float-left">
-                                        <ins><span class="text-brand">$120.00</span></ins>
-                                        <ins><span class="old-price font-md ml-15">$200.00</span></ins>
+                                        <ins><span class="text-brand">Pkr120.00</span></ins>
+                                        <ins><span class="old-price font-md ml-15">Pkr200.00</span></ins>
                                         <span class="save-price  font-md color3 ml-15">25% Off</span>
                                     </div>
                                 </div>
@@ -180,7 +265,7 @@
                                     <div class="product-extra-link2">
                                         <button type="submit" class="button button-add-to-cart">Add to cart</button>
                                         <a aria-label="Add To Wishlist" class="action-btn hover-up" href="/wishlist"><i class="fi-rs-heart"></i></a>
-                                        <a aria-label="Compare" class="action-btn hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                        <a aria-label="Add To Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shuffle"></i></a>
                                     </div>
                                 </div>
                                 <ul class="product-meta font-xs color-grey mt-50">
@@ -216,24 +301,33 @@
                                 <ul>
                                     <li>Get great devices up to 50% off <a href="/shop">View details</a></li>
                                     <li>Supper Value Deals - Save more with coupons</li>
-                                    <li>Trendy 25silver jewelry, save up 35% off today <a href="/shop">Shop now</a></li>
+                                    <li>Trendy 25silver jewelry, save up 35% off today <a href="/shopjewel">Shop now</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4">
                         <div class="header-info header-info-right">
-                            <ul>
-                                <li>
-                                    <a class="language-dropdown-active" href="#"> <i class="fi-rs-world"></i> English <i class="fi-rs-angle-small-down"></i></a>
-                                    <ul class="language-dropdown">
-                                        <li><a href="#"><img src="assets/imgs/theme/flag-fr.png" alt="">Français</a></li>
-                                        <li><a href="#"><img src="assets/imgs/theme/flag-dt.png" alt="">Deutsch</a></li>
-                                        <li><a href="#"><img src="assets/imgs/theme/flag-ru.png" alt="">Pусский</a></li>
-                                    </ul>
-                                </li>
-                                <li><i class="fas fa-user"></i><a href="/userlogin">Log In / Sign Up</a></li>
-                            </ul>
+                           <ul>
+    <li><i class="fas fa-user"></i><a href="/vendorregister">Become Vendor</a></li>
+    
+    @auth
+        {{-- Show logout option if user is authenticated --}}
+        <li>
+            <i class="fas fa-user"></i>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <a href="{{ route('logout') }}" 
+                   onclick="event.preventDefault(); this.closest('form').submit();">
+                   Log Out
+                </a>
+            </form>
+        </li>
+    @else
+        {{-- Show login option if user is not authenticated --}}
+        <li><i class="fas fa-user"></i><a href="{{ route('login') }}">Become Member</a></li>
+    @endauth
+</ul>
                         </div>
                     </div>
                 </div>
@@ -244,7 +338,7 @@
                 <div class="header-wrap">
                     <div class="logo logo-width-1">
                        <a href="/" style="display:inline-block;">
-  <img src="assets/imgs/theme/nl.png" alt="logo" style="width:200px; height:80px;">
+  <img src="assets/imgs/theme/" alt="logo" style="width:200px; height:80px;">
 
 </a>
                     </div>
@@ -281,7 +375,7 @@
                                                 </div>
                                                 <div class="shopping-cart-title">
                                                     <h4><a href="/shop">Daisy Casual Bag</a></h4>
-                                                    <h4><span>1 × </span>$800.00</h4>
+                                                    <h4><span>1 × </span>Pkr800.00</h4>
                                                 </div>
                                                 <div class="shopping-cart-delete">
                                                     <a href="#"><i class="fi-rs-cross-small"></i></a>
@@ -293,7 +387,7 @@
                                                 </div>
                                                 <div class="shopping-cart-title">
                                                     <h4><a href="/shop">Corduroy Shirts</a></h4>
-                                                    <h4><span>1 × </span>$3200.00</h4>
+                                                    <h4><span>1 × </span>Pkr3200.00</h4>
                                                 </div>
                                                 <div class="shopping-cart-delete">
                                                     <a href="#"><i class="fi-rs-cross-small"></i></a>
@@ -302,7 +396,7 @@
                                         </ul>
                                         <div class="shopping-cart-footer">
                                             <div class="shopping-cart-total">
-                                                <h4>Total <span>$4000.00</span></h4>
+                                                <h4>Total <span>Pkr4000.00</span></h4>
                                             </div>
                                             <div class="shopping-cart-button">
                                                 <a href="/cart" class="outline">View cart</a>
@@ -322,7 +416,7 @@
                 <div class="header-wrap header-space-between position-relative">
                     <div class="logo logo-width-1 d-block d-lg-none">
 <a href="/" style="display:inline-block;">
-  <img src="assets/imgs/theme/nl.png" alt="logo" style="width:200px; height:80px;">
+  <img src="assets/imgs/theme/" alt="logo" style="width:200px; height:80px;">
 </a>
 
                     </div>
@@ -342,21 +436,20 @@
                                                         <li class="mega-menu-col col-lg-6">
                                                             <ul>
                                                                 <li><span class="submenu-title">Face Makeup</span></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Compact Powder</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Foundation</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Highlighter</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Blush</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Concealer</a></li>
+                                                              
+                                                             <li><a class="dropdown-item nav-link nav_item" href="/shop">Foundation</a></li>
+<li><a class="dropdown-item nav-link nav_item" href="/shop">Blushon</a></li>
+
+                                                                
                                                             </ul>
                                                         </li>
                                                         <li class="mega-menu-col col-lg-6">
                                                             <ul>
                                                                <li><span class="submenu-title">Eye Makeup</span></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">EyeLiner</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Mascara</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Eyeshadow Pallete</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Eye Pencil</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Eyebrow Pencil</a></li>
+                                                             <li><a class="dropdown-item nav-link nav_item" href="/shop">Mascara</a></li>
+<li><a class="dropdown-item nav-link nav_item" href="/shop">Eyeliner</a></li>
+
+                                                              
                                                             
                                                             </ul>
                                                         </li>
@@ -373,7 +466,7 @@
                                         </div>
                                     </li>
                                     <li class="has-children">
-                                        <a href="/shop">Jewellery</a>
+                                        <a href="/shopjewel">Jewellery</a>
                                         <div class="dropdown-menu">
                                             <ul class="mega-menu d-lg-flex">
                                                 <li class="mega-menu-col col-lg-7">
@@ -381,20 +474,18 @@
                                                         <li class="mega-menu-col col-lg-6">
                                                             <ul>
                                                               
-                                                                <li><span class="submenu-title">Neck Accessories</span></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Pendant</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Choker</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Chain</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Locket</a></li>
+                                                                <li><span class="submenu-title">Neck And Ear Jewellery</span></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="/shopjewel">Pendant</a></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="/shopjewel">Earrings</a></li>
+                                                                
                                                             </ul>
                                                         </li>
                                                         <li class="mega-menu-col col-lg-6">
                                                             <ul>  
-                                                                 <li><span class="submenu-title">Hand Accessories</span></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Bracelet</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Ring</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Bangels</a></li>
-                                                                <li><a class="dropdown-item nav-link nav_item" href="#">Wrist Cuff</a></li>
+                                                                 <li><span class="submenu-title">Hand And Finger Jewellery</span></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="/shopjewel">Bracelet</a></li>
+                                                                <li><a class="dropdown-item nav-link nav_item" href="/shopjewel">Ring</a></li>
+                                                              
                                                             </ul>
                                                         </li>
                                                     </ul>
@@ -439,23 +530,21 @@
                                             <li class="sub-mega-menu sub-mega-menu-width-22">
                                                 <a class="menu-title" href="/shop">Cosmetics</a>
                                                 <ul>
-                                                    <li><a href="/shop">Dresses</a></li>
-                                                    <li><a href="/shop">Blouses & Shirts</a></li>
-                                                    <li><a href="/shop">Hoodies & Sweatshirts</a></li>
-                                                    <li><a href="/shop">Wedding Dresses</a></li>
-                                                    <li><a href="/shop">Prom Dresses</a></li>
-                                                    <li><a href="/shop">Cosplay Costumes</a></li>
+                                                   <li><a class="dropdown-item nav-link nav_item" href="/shop">Foundation</a></li>
+<li><a class="dropdown-item nav-link nav_item" href="/shop">Blushon</a></li>
+<li><a class="dropdown-item nav-link nav_item" href="/shop">Mascara</a></li>
+<li><a class="dropdown-item nav-link nav_item" href="/shop">Eyeliner</a></li>
+
                                                 </ul>
                                             </li>
                                             <li class="sub-mega-menu sub-mega-menu-width-22">
-                                                <a class="menu-title" href="/shop">Jewellery</a>
+                                                <a class="menu-title" href="/shopjewel">Jewellery</a>
                                                 <ul>
-                                                    <li><a href="/shop">Jackets</a></li>
-                                                    <li><a href="/shop">Casual Faux Leather</a></li>
-                                                    <li><a href="/shop">Genuine Leather</a></li>
-                                                    <li><a href="/shop">Casual Pants</a></li>
-                                                    <li><a href="/shop">Sweatpants</a></li>
-                                                    <li><a href="/shop">Harem Pants</a></li>
+                                                  <li><a class="dropdown-item nav-link nav_item" href="/shopjewel">Earrings</a></li>
+<li><a class="dropdown-item nav-link nav_item" href="/shopjewel">Pendant</a></li>
+<li><a class="dropdown-item nav-link nav_item" href="/shopjewel">Bracelet</a></li>
+<li><a class="dropdown-item nav-link nav_item" href="/shopjewel">Ring</a></li>
+
                                                 </ul>
                                             </li>
                                           
@@ -487,10 +576,8 @@
                                             <li><a href="/about">About Us</a></li>
                                             <li><a href="/contact">Contact</a></li>
                                             <li><a href="/account">My Account</a></li>
-                                            <li><a href="/userlogin">login/register</a></li>
-                                            <li><a href="page-purchase-guide.html">Purchase Guide</a></li>
-                                            <li><a href="/privacypolicy">Privacy Policy</a></li>
-                                            <li><a href="/terms">Terms of Service</a></li>
+                                            <li><a href="/userlogin">Login/Register</a></li>
+                                           
                                             <li><a href="/404">404 Page</a></li>
                                         </ul>
                                     </li>
@@ -526,7 +613,7 @@
                                             </div>
                                             <div class="shopping-cart-title">
                                                 <h4><a href="/shop">Plain Striola Shirts</a></h4>
-                                                <h3><span>1 × </span>$800.00</h3>
+                                                <h3><span>1 × </span>Pkr800.00</h3>
                                             </div>
                                             <div class="shopping-cart-delete">
                                                 <a href="#"><i class="fi-rs-cross-small"></i></a>
@@ -538,7 +625,7 @@
                                             </div>
                                             <div class="shopping-cart-title">
                                                 <h4><a href="/shop">Macbook Pro 2022</a></h4>
-                                                <h3><span>1 × </span>$3500.00</h3>
+                                                <h3><span>1 × </span>Pkr3500.00</h3>
                                             </div>
                                             <div class="shopping-cart-delete">
                                                 <a href="#"><i class="fi-rs-cross-small"></i></a>
@@ -547,7 +634,7 @@
                                     </ul>
                                     <div class="shopping-cart-footer">
                                         <div class="shopping-cart-total">
-                                            <h4>Total <span>$383.00</span></h4>
+                                            <h4>Total <span>Pkr383.00</span></h4>
                                         </div>
                                         <div class="shopping-cart-button">
                                             <a href="/cart">View cart</a>
@@ -574,7 +661,7 @@
             <div class="mobile-header-top">
                 <div class="mobile-header-logo">
                    <a href="/" style="display:inline-block;">
-  <img src="assets/imgs/theme/nl.png" alt="logo" style="width:200px; height:80px">
+  <img src="assets/imgs/theme/.png" alt="logo" style="width:200px; height:80px">
 </a>
 
                 </div>
@@ -600,7 +687,7 @@
                         <div class="categori-dropdown-wrap categori-dropdown-active-small">
                             <ul>
                                 <li><a href="/shop">Cosmetics</a></li>
-                                <li><a href="/shop">Jewellry</a></li>
+                                <li><a href="/shopjewel">Jewellry</a></li>
                                 
                             </ul>
                         </div>
@@ -620,23 +707,18 @@
                                             <li class="sub-mega-menu sub-mega-menu-width-22">
                                                 <a class="menu-title" href="/shop">Cosmetics</a>
                                                 <ul>
-                                                    <li><a href="/shop">Dresses</a></li>
-                                                    <li><a href="/shop">Blouses & Shirts</a></li>
-                                                    <li><a href="/shop">Hoodies & Sweatshirts</a></li>
-                                                    <li><a href="/shop">Wedding Dresses</a></li>
-                                                    <li><a href="/shop">Prom Dresses</a></li>
-                                                    <li><a href="/shop">Cosplay Costumes</a></li>
+                                      
                                                 </ul>
                                             </li>
                                             <li class="sub-mega-menu sub-mega-menu-width-22">
-                                                <a class="menu-title" href="/shop">Jewellery</a>
+                                                <a class="menu-title" href="/shopjewel">Jewellery</a>
                                                 <ul>
-                                                    <li><a href="/shop">Jackets</a></li>
-                                                    <li><a href="/shop">Casual Faux Leather</a></li>
-                                                    <li><a href="/shop">Genuine Leather</a></li>
-                                                    <li><a href="/shop">Casual Pants</a></li>
-                                                    <li><a href="/shop">Sweatpants</a></li>
-                                                    <li><a href="/shop">Harem Pants</a></li>
+                                                    <li><a href="/shopjewel">Jackets</a></li>
+                                                    <li><a href="/shopjewel">Casual Faux Leather</a></li>
+                                                    <li><a href="/shopjewel">Genuine Leather</a></li>
+                                                    <li><a href="/shopjewel">Casual Pants</a></li>
+                                                    <li><a href="/shopjewel">Sweatpants</a></li>
+                                                    <li><a href="/shopjewel">Harem Pants</a></li>
                                                 </ul>
                                             </li>
                                           
@@ -651,10 +733,8 @@
                                     <li><a href="/about">About Us</a></li>
                                     <li><a href="/contact">Contact</a></li>
                                     <li><a href="/account">My Account</a></li>
-                                    <li><a href="/userlogin">login/register</a></li>
-                                    <li><a href="page-purchase-guide.html">Purchase Guide</a></li>
-                                    <li><a href="/privacypolicy">Privacy Policy</a></li>
-                                    <li><a href="/terms">Terms of Service</a></li>
+                                    <li><a href="/userlogin">Login/Register</a></li>
+                                   
                                     <li><a href="/404">404 Page</a></li>
                                 </ul>
                             </li>
@@ -755,16 +835,16 @@
                                 <div class="product-cart-wrap mb-30" data-id="product-23">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-2-1.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-2-2.jpg" alt="">
+                                            <a href="/shopjewel">
+                                                <img class="default-img" src="assets/imgs/shop/s1.webp" alt="">
+                                                <img class="hover-img" src="assets/imgs/shop/s1.webp" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
                                             <a aria-label="Quick view" class="action-btn hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
 <i class="fi-rs-search"></i></a>
                                             <a aria-label="Add To Wishlist" class="action-btn hover-up" href="/wishlist"><i class="fi-rs-heart"></i></a>
-                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="shop-Add to Cart.html"><i class="fi-rs-shuffle"></i></a>
+                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shuffle"></i></a>
                                         </div>
                                         <div class="product-badges product-badges-position product-badges-mrg">
                                             <span class="hot">Hot</span>
@@ -772,17 +852,17 @@
                                     </div>
                                     <div class="product-content-wrap">
                                         <div class="product-category">
-                                            <a href="/shop">Music</a>
+                                            <a href="/shopjewel">Jewellery</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">Colorful Pattern Shirts</a></h2>
+                                        <h2><a href="/shopjewel">Blue Ring</a></h2>
                                         <div class="rating-result" title="90%">
                                             <span>
                                                 <span>90%</span>
                                             </span>
                                         </div>
                                         <div class="product-price">
-                                            <span>$238.85 </span>
-                                            <span class="old-price">$245.8</span>
+                                            <span>Pkr.238.85 </span>
+                                            <span class="old-price">Pkr.245.8</span>
                                         </div>
                                         <div class="product-action-1 show">
                                             <a aria-label="Add To Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shopping-bag-add"></i></a>
@@ -794,16 +874,16 @@
                                 <div class="product-cart-wrap mb-30" data-id="product-24">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-3-1.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-3-2.jpg" alt="">
+                                            <a href="/shopjewel">
+                                                <img class="default-img" src="assets/imgs/shop/product.webp" alt="">
+                                                <img class="hover-img" src="assets/imgs/shop/product.webp" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
                                             <a aria-label="Quick view" class="action-btn hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
 <i class="fi-rs-search"></i></a>
                                             <a aria-label="Add To Wishlist" class="action-btn hover-up" href="/wishlist"><i class="fi-rs-heart"></i></a>
-                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="shop-Add to Cart.html"><i class="fi-rs-shuffle"></i></a>
+                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shuffle"></i></a>
                                         </div>
                                         <div class="product-badges product-badges-position product-badges-mrg">
                                             <span class="new">New</span>
@@ -811,17 +891,17 @@
                                     </div>
                                     <div class="product-content-wrap">
                                         <div class="product-category">
-                                            <a href="/shop">Music</a>
+                                            <a href="/shopjewel">Jewellery</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">Cartoon Astronaut T-Shirts</a></h2>
+                                        <h2><a href="/shopjewel">Rose Gold Ring</a></h2>
                                         <div class="rating-result" title="90%">
                                             <span>
                                                 <span>50%</span>
                                             </span>
                                         </div>
                                         <div class="product-price">
-                                            <span>$138.85 </span>
-                                            <span class="old-price">$255.8</span>
+                                            <span>Pkr.238.85 </span>
+                                            <span class="old-price">Pkr.245.8</span>
                                         </div>
                                         <div class="product-action-1 show">
                                             <a aria-label="Add To Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shopping-bag-add"></i></a>
@@ -833,16 +913,16 @@
                                 <div class="product-cart-wrap mb-30" data-id="product-25">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-7-1.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-7-2.jpg" alt="">
+                                            <a href="/shopjewel">
+                                                <img class="default-img" src="assets/imgs/shop/sil-ring.webp" alt="">
+                                                <img class="hover-img" src="assets/imgs/shop/sil-ring.webp" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
                                             <a aria-label="Quick view" class="action-btn hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
 <i class="fi-rs-search"></i></a>
                                             <a aria-label="Add To Wishlist" class="action-btn hover-up" href="/wishlist"><i class="fi-rs-heart"></i></a>
-                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="shop-Add to Cart.html"><i class="fi-rs-shuffle"></i></a>
+                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shuffle"></i></a>
                                         </div>
                                         <div class="product-badges product-badges-position product-badges-mrg">
                                             <span class="best">Best Sell</span>
@@ -850,17 +930,17 @@
                                     </div>
                                     <div class="product-content-wrap">
                                         <div class="product-category">
-                                            <a href="/shop">Watch</a>
+                                            <a href="/shopjewel">Silver Ring</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">Plain Striola Shirts</a></h2>
+                                        <h2><a href="/shopjewel">Silver Ring</a></h2>
                                         <div class="rating-result" title="90%">
                                             <span>
                                                 <span>95%</span>
                                             </span>
                                         </div>
                                         <div class="product-price">
-                                            <span>$338.85 </span>
-                                            <span class="old-price">$445.8</span>
+                                            <span>Pkr.338.85 </span>
+                                            <span class="old-price">Pkr.445.8</span>
                                         </div>
                                         <div class="product-action-1 show">
                                             <a aria-label="Add To Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shopping-bag-add"></i></a>
@@ -877,16 +957,17 @@
                                 <div class="product-cart-wrap mb-30" data-id="product-26">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-1-2.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-1-2.jpg" alt="">
+                                            <a href="/shopjewel">
+                                                 <img class="default-img" src="assets/imgs/shop/silver-earrings.webp" alt="">
+                                                <img class="hover-img" src="assets/imgs/shop/silver-earrings.webp" alt="">
+                                               
                                             </a>
                                         </div>
                                         <div class="product-action-1">
                                             <a aria-label="Quick view" class="action-btn hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
 <i class="fi-rs-search"></i></a>
                                             <a aria-label="Add To Wishlist" class="action-btn hover-up" href="/wishlist"><i class="fi-rs-heart"></i></a>
-                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="shop-Add to Cart.html"><i class="fi-rs-shuffle"></i></a>
+                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shuffle"></i></a>
                                         </div>
                                         <div class="product-badges product-badges-position product-badges-mrg">
                                             <span class="sale">Sale</span>
@@ -894,17 +975,17 @@
                                     </div>
                                     <div class="product-content-wrap">
                                         <div class="product-category">
-                                            <a href="/shop">Music</a>
+                                            <a href="/shopjewel">Jewellery</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">Landscape Painting Shirt</a></h2>
+                                        <h2><a href="/shopjewel">Silver Earrings</a></h2>
                                         <div class="rating-result" title="90%">
                                             <span>
                                                 <span>70%</span>
                                             </span>
                                         </div>
                                         <div class="product-price">
-                                            <span>$123.85 </span>
-                                            <span class="old-price">$235.8</span>
+                                            <span>Pkr.123.85 </span>
+                                            <span class="old-price">Pkr.235.8</span>
                                         </div>
                                         <div class="product-action-1 show">
                                             <a aria-label="Add To Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shopping-bag-add"></i></a>
@@ -916,16 +997,16 @@
                                 <div class="product-cart-wrap mb-30" data-id="product-27">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-4-1.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-3-2.jpg" alt="">
+                                            <a href="/shopjewel">
+                                                <img class="default-img" src="assets/imgs/shop/goldearring.jpg" alt="">
+                                                <img class="hover-img" src="assets/imgs/shop/goldearring.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
                                             <a aria-label="Quick view" class="action-btn hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
 <i class="fi-rs-search"></i></a>
                                             <a aria-label="Add To Wishlist" class="action-btn hover-up" href="/wishlist"><i class="fi-rs-heart"></i></a>
-                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="shop-Add to Cart.html"><i class="fi-rs-shuffle"></i></a>
+                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shuffle"></i></a>
                                         </div>
                                         <div class="product-badges product-badges-position product-badges-mrg">
                                             <span class="hot">-30%</span>
@@ -933,17 +1014,17 @@
                                     </div>
                                     <div class="product-content-wrap">
                                         <div class="product-category">
-                                            <a href="/shop">Speaker</a>
+                                            <a href="/shopjewel">Jewellery</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">Letter Print T-Shirt</a></h2>
+                                        <h2><a href="/shopjewel">Gold Vermeil Hoop</a></h2>
                                         <div class="rating-result" title="90%">
                                             <span>
                                                 <span>70%</span>
                                             </span>
                                         </div>
                                         <div class="product-price">
-                                            <span>$28.85 </span>
-                                            <span class="old-price">$45.8</span>
+                                            <span>Pkr.28.85 </span>
+                                            <span class="old-price">Pkr.45.8</span>
                                         </div>
                                         <div class="product-action-1 show">
                                             <a aria-label="Add To Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shopping-bag-add"></i></a>
@@ -956,16 +1037,16 @@
                                 <div class="product-cart-wrap mb-30" data-id="product-28">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-5-2.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-5-2.jpg" alt="">
+                                            <a href="/shopjewel">
+                                                <img class="default-img" src="assets/imgs/shop/blue-earrings-4.webp" alt="">
+                                                <img class="hover-img" src="assets/imgs/shop/blue-earrings-4.webp" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
                                             <a aria-label="Quick view" class="action-btn hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
 <i class="fi-rs-search"></i></a>
                                             <a aria-label="Add To Wishlist" class="action-btn hover-up" href="/wishlist"><i class="fi-rs-heart"></i></a>
-                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="shop-Add to Cart.html"><i class="fi-rs-shuffle"></i></a>
+                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shuffle"></i></a>
                                         </div>
                                         <div class="product-badges product-badges-position product-badges-mrg">
                                             <span class="hot">-22%</span>
@@ -973,17 +1054,17 @@
                                     </div>
                                     <div class="product-content-wrap">
                                         <div class="product-category">
-                                            <a href="/shop">Camera</a>
+                                            <a href="/shopjewel">Jewellery</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">Element Pattern Print Shirts</a></h2>
+                                        <h2><a href="/shopjewel">Blue Earrings</a></h2>
                                         <div class="rating-result" title="90%">
                                             <span>
                                                 <span>70%</span>
                                             </span>
                                         </div>
                                         <div class="product-price">
-                                            <span>$238.85 </span>
-                                            <span class="old-price">$245.8</span>
+                                            <span>Pkr.238.85 </span>
+                                            <span class="old-price">Pkr.245.8</span>
                                         </div>
                                         <div class="product-action-1 show">
                                             <a aria-label="Add To Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shopping-bag-add"></i></a>
@@ -1000,16 +1081,16 @@
                                 <div class="product-cart-wrap mb-30" data-id="product-29">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-8-2.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-8-1.jpg" alt="">
+                                            <a href="/shopjewel">
+                                                <img class="default-img" src="assets/imgs/shop/sand-solitary-necklace.jpg" alt="">
+                                                <img class="hover-img" src="assets/imgs/shop/sand-solitary-necklace.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
                                             <a aria-label="Quick view" class="action-btn hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
 <i class="fi-rs-search"></i></a>
                                             <a aria-label="Add To Wishlist" class="action-btn hover-up" href="/wishlist"><i class="fi-rs-heart"></i></a>
-                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="shop-Add to Cart.html"><i class="fi-rs-shuffle"></i></a>
+                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shuffle"></i></a>
                                         </div>
                                         <div class="product-badges product-badges-position product-badges-mrg">
                                             <span class="new">New</span>
@@ -1017,16 +1098,16 @@
                                     </div>
                                     <div class="product-content-wrap">
                                         <div class="product-category">
-                                            <a href="/shop">Phone</a>
+                                            <a href="/shopjewel">Jewellery</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">Vintage Henley Shirt</a></h2>
+                                        <h2><a href="/shopjewel">Sand Solitary Necklace</a></h2>
                                         <div class="rating-result" title="90%">
                                             <span>
                                                 <span>98%</span>
                                             </span>
                                         </div>
                                         <div class="product-price">
-                                            <span>$1275.85 </span>
+                                            <span>Pkr.1275.85 </span>
                                         </div>
                                         <div class="product-action-1 show">
                                             <a aria-label="Add To Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shopping-bag-add"></i></a>
@@ -1038,31 +1119,31 @@
                                 <div class="product-cart-wrap mb-30" data-id="product-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-11-1.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-11-2.jpg" alt="">
+                                            <a href="/shopjewel">
+                                                <img class="default-img" src="assets/imgs/shop/silver-pendant.webp" alt="">
+                                                <img class="hover-img" src="assets/imgs/shop/silver-pendant.webp" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
                                             <a aria-label="Quick view" class="action-btn hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
 <i class="fi-rs-search"></i></a>
                                             <a aria-label="Add To Wishlist" class="action-btn hover-up" href="/wishlist"><i class="fi-rs-heart"></i></a>
-                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="shop-Add to Cart.html"><i class="fi-rs-shuffle"></i></a>
+                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shuffle"></i></a>
                                         </div>
                                     </div>
                                     <div class="product-content-wrap">
                                         <div class="product-category">
-                                            <a href="/shop">Accessories </a>
+                                            <a href="/shopjewel">Jewellery</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">Cotton Leaf Printed</a></h2>
+                                        <h2><a href="/shopjewel">Silver Pendant</a></h2>
                                         <div class="rating-result" title="90%">
                                             <span>
                                                 <span>70%</span>
                                             </span>
                                         </div>
                                         <div class="product-price">
-                                            <span>$238.85 </span>
-                                            <span class="old-price">$245.8</span>
+                                            <span>Pkr.238.85 </span>
+                                            <span class="old-price">Pkr.245.8</span>
                                         </div>
                                         <div class="product-action-1 show">
                                             <a aria-label="Add To Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shopping-bag-add"></i></a>
@@ -1074,31 +1155,31 @@
                                 <div class="product-cart-wrap mb-30"data-id="product-32">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-13-1.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-13-2.jpg" alt="">
+                                            <a href="/shopjewel">
+                                                <img class="default-img" src="assets/imgs/shop/oasis-necklace.jpg" alt="">
+                                                <img class="hover-img" src="assets/imgs/shop/oasis-necklace.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
                                             <a aria-label="Quick view" class="action-btn hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
 <i class="fi-rs-search"></i></a>
                                             <a aria-label="Add To Wishlist" class="action-btn hover-up" href="/wishlist"><i class="fi-rs-heart"></i></a>
-                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="shop-Add to Cart.html"><i class="fi-rs-shuffle"></i></a>
+                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shuffle"></i></a>
                                         </div>
                                     </div>
                                     <div class="product-content-wrap">
                                         <div class="product-category">
-                                            <a href="/shop">Accessories </a>
+                                            <a href="/shopjewel">Jewellery</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">Cotton Leaf Printed</a></h2>
+                                        <h2><a href="/shopjewel">Oasis Necklace</a></h2>
                                         <div class="rating-result" title="90%">
                                             <span>
                                                 <span>70%</span>
                                             </span>
                                         </div>
                                         <div class="product-price">
-                                            <span>$238.85 </span>
-                                            <span class="old-price">$245.8</span>
+                                            <span>Pkr.238.85 </span>
+                                            <span class="old-price">Pkr.245.8</span>
                                         </div>
                                         <div class="product-action-1 show">
                                             <a aria-label="Add To Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shopping-bag-add"></i></a>
@@ -1117,16 +1198,16 @@
                                 <div class="product-cart-wrap mb-30" data-id="product-31">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-3-1.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-3-2.jpg" alt="">
+                                            <a href="/shopjewel">
+                                               <img class="default-img" src="assets/imgs/shop/brac.jpeg" alt="">
+                                                <img class="hover-img" src="assets/imgs/shop/brac.jpeg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
                                             <a aria-label="Quick view" class="action-btn hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
 <i class="fi-rs-search"></i></a>
                                             <a aria-label="Add To Wishlist" class="action-btn hover-up" href="/wishlist"><i class="fi-rs-heart"></i></a>
-                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="shop-Add to Cart.html"><i class="fi-rs-shuffle"></i></a>
+                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shuffle"></i></a>
                                         </div>
                                         <div class="product-badges product-badges-position product-badges-mrg">
                                             <span class="hot">Hot</span>
@@ -1134,17 +1215,17 @@
                                     </div>
                                     <div class="product-content-wrap">
                                         <div class="product-category">
-                                            <a href="/shop">Music</a>
+                                            <a href="/shopjewel">Jewellery</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">Colorful Pattern Shirts</a></h2>
+                                        <h2><a href="/shopjewel">Emerald Green Bracelet</a></h2>
                                         <div class="rating-result" title="90%">
                                             <span>
                                                 <span>90%</span>
                                             </span>
                                         </div>
                                         <div class="product-price">
-                                            <span>$238.85 </span>
-                                            <span class="old-price">$245.8</span>
+                                            <span>Pkr.238.85 </span>
+                                            <span class="old-price">Pkr.245.8</span>
                                         </div>
                                         <div class="product-action-1 show">
                                             <a aria-label="Add To Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shopping-bag-add"></i></a>
@@ -1156,16 +1237,16 @@
                                 <div class="product-cart-wrap mb-30" data-id="product-41">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-2-1.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-2-2.jpg" alt="">
+                                            <a href="/shopjewel">
+                                                <img class="default-img" src="assets/imgs/shop/images.jpg" alt="">
+                                                <img class="hover-img" src="assets/imgs/shop/images.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
                                             <a aria-label="Quick view" class="action-btn hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
 <i class="fi-rs-search"></i></a>
                                             <a aria-label="Add To Wishlist" class="action-btn hover-up" href="/wishlist"><i class="fi-rs-heart"></i></a>
-                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="shop-Add to Cart.html"><i class="fi-rs-shuffle"></i></a>
+                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shuffle"></i></a>
                                         </div>
                                         <div class="product-badges product-badges-position product-badges-mrg">
                                             <span class="new">New</span>
@@ -1173,17 +1254,17 @@
                                     </div>
                                     <div class="product-content-wrap">
                                         <div class="product-category">
-                                            <a href="/shop">Music</a>
+                                            <a href="/shopjewel">Jewellery</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">Cartoon Astronaut T-Shirts</a></h2>
+                                        <h2><a href="/shopjewel">Gold Bracelet</a></h2>
                                         <div class="rating-result" title="90%">
                                             <span>
                                                 <span>50%</span>
                                             </span>
                                         </div>
                                         <div class="product-price">
-                                            <span>$138.85 </span>
-                                            <span class="old-price">$255.8</span>
+                                            <span>Pkr.138.85 </span>
+                                            <span class="old-price">Pkr.255.8</span>
                                         </div>
                                         <div class="product-action-1 show">
                                             <a aria-label="Add To Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shopping-bag-add"></i></a>
@@ -1197,16 +1278,17 @@
                                 <div class="product-cart-wrap mb-30"  data-id="product-22">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-7-2.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-7-1.jpg" alt="">
+                                            <a href="/shopjewel">
+                                                
+                                                 <img class="default-img" src="assets/imgs/shop/bracelet.webp" alt="">
+                                                <img class="hover-img" src="assets/imgs/shop/bracelet.webp" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
                                             <a aria-label="Quick view" class="action-btn hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
 <i class="fi-rs-search"></i></a>
                                             <a aria-label="Add To Wishlist" class="action-btn hover-up" href="/wishlist"><i class="fi-rs-heart"></i></a>
-                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="shop-Add to Cart.html"><i class="fi-rs-shuffle"></i></a>
+                                            <a aria-label="Add to Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shuffle"></i></a>
                                         </div>
                                         <div class="product-badges product-badges-position product-badges-mrg">
                                             <span class="best">Best Sell</span>
@@ -1214,17 +1296,17 @@
                                     </div>
                                     <div class="product-content-wrap">
                                         <div class="product-category">
-                                            <a href="/shop">Watch</a>
+                                            <a href="/shopjewel">Jewellery</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">Plain Striola Shirts</a></h2>
+                                        <h2><a href="/shopjewel">Crystal Blue Bracelet</a></h2>
                                         <div class="rating-result" title="90%">
                                             <span>
                                                 <span>95%</span>
                                             </span>
                                         </div>
                                         <div class="product-price">
-                                            <span>$338.85 </span>
-                                            <span class="old-price">$445.8</span>
+                                            <span>Pkr.338.85 </span>
+                                            <span class="old-price">Pkr.445.8</span>
                                         </div>
                                         <div class="product-action-1 show">
                                             <a aria-label="Add To Cart" class="action-btn hover-up" href="/cart"><i class="fi-rs-shopping-bag-add"></i></a>
@@ -1244,13 +1326,11 @@
                         <div class="widget-category mb-30">
                             <h5 class="section-title style-1 mb-30 wow fadeIn animated">Category</h5>
                             <ul class="categories">
-                                <li><a href="/shop">Shoes & Bags</a></li>
-                                <li><a href="/shop">Blouses & Shirts</a></li>
-                                <li><a href="/shop">Dresses</a></li>
-                                <li><a href="/shop">Swimwear</a></li>
-                                <li><a href="/shop">Beauty</a></li>
-                                <li><a href="/shop">Jewelry & Watch</a></li>
-                                <li><a href="/shop">Accessories</a></li>
+                                <li><a href="/shopjewel">Hand Jewellery </a></li>
+                                <li><a href="/shopjewel">Neck Jewellery</a></li>
+                                <li><a href="/shopjewel">Ear Jewellery </a></li>
+                                <li><a href="/shopjewel">Finger Jewellery</a></li>
+                               
                             </ul>
                         </div>
                         <!-- Fillter By Price -->
@@ -1274,28 +1354,18 @@
                                     <label class="fw-900">Color</label>
                                     <div class="custome-checkbox">
                                         <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox1" value="">
-                                        <label class="form-check-label" for="exampleCheckbox1"><span>Red (56)</span></label>
+                                        <label class="form-check-label" for="exampleCheckbox1"><span>Silver (46)</span></label>
                                         <br>
                                         <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox2" value="">
-                                        <label class="form-check-label" for="exampleCheckbox2"><span>Green (78)</span></label>
+                                        <label class="form-check-label" for="exampleCheckbox2"><span>Gold (52)</span></label>
                                         <br>
                                         <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox3" value="">
-                                        <label class="form-check-label" for="exampleCheckbox3"><span>Blue (54)</span></label>
+                                        <label class="form-check-label" for="exampleCheckbox3"><span>Emerald (34)</span></label>
                                     </div>
-                                    <label class="fw-900 mt-15">Item Condition</label>
-                                    <div class="custome-checkbox">
-                                        <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox11" value="">
-                                        <label class="form-check-label" for="exampleCheckbox11"><span>New (1506)</span></label>
-                                        <br>
-                                        <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox21" value="">
-                                        <label class="form-check-label" for="exampleCheckbox21"><span>Refurbished (27)</span></label>
-                                        <br>
-                                        <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox31" value="">
-                                        <label class="form-check-label" for="exampleCheckbox31"><span>Used (45)</span></label>
-                                    </div>
+                                    
                                 </div>
                             </div>
-                            <a href="/shop" class="btn btn-sm btn-default"><i class="fi-rs-filter mr-5"></i> Fillter</a>
+                            <a href="/shopjewel" class="btn btn-sm btn-default"><i class="fi-rs-filter mr-5"></i> Fillter</a>
                         </div>
                         <!-- Product sidebar Widget -->
                         <div class="sidebar-widget product-sidebar  mb-30 p-30 bg-grey border-radius-10">
@@ -1305,11 +1375,11 @@
                             </div>
                             <div class="single-post clearfix">
                                 <div class="image">
-                                    <img src="assets/imgs/shop/thumbnail-3.jpg" alt="#">
+                                    <img src="assets/imgs/shop/black.jpg" alt="#">
                                 </div>
                                 <div class="content pt-10">
-                                    <h5><a href="shop-product-detail.html">Chen Cardigan</a></h5>
-                                    <p class="price mb-0 mt-5">$99.50</p>
+                                    <h5><a href="shop-product-detail.html">Black Bracelet</a></h5>
+                                    <p class="price mb-0 mt-5">Pkr.99.50</p>
                                     <div class="product-rate">
                                         <div class="product-rating" style="width:90%"></div>
                                     </div>
@@ -1317,11 +1387,11 @@
                             </div>
                             <div class="single-post clearfix">
                                 <div class="image">
-                                    <img src="assets/imgs/shop/thumbnail-4.jpg" alt="#">
+                                    <img src="assets/imgs/shop/s2.webp" alt="#">
                                 </div>
                                 <div class="content pt-10">
-                                    <h6><a href="shop-product-detail.html">Chen Sweater</a></h6>
-                                    <p class="price mb-0 mt-5">$89.50</p>
+                                    <h6><a href="shop-product-detail.html">Butterfly Earring</a></h6>
+                                    <p class="price mb-0 mt-5">Pkr.89.50</p>
                                     <div class="product-rate">
                                         <div class="product-rating" style="width:80%"></div>
                                     </div>
@@ -1329,25 +1399,18 @@
                             </div>
                             <div class="single-post clearfix">
                                 <div class="image">
-                                    <img src="assets/imgs/shop/thumbnail-5.jpg" alt="#">
+                                    <img src="assets/imgs/banner/product.webp" alt="#">
                                 </div>
                                 <div class="content pt-10">
-                                    <h6><a href="shop-product-detail.html">Colorful Jacket</a></h6>
-                                    <p class="price mb-0 mt-5">$25</p>
+                                    <h6><a href="shop-product-detail.html">Gold Pearl Ring</a></h6>
+                                    <p class="price mb-0 mt-5">Pkr.25</p>
                                     <div class="product-rate">
                                         <div class="product-rating" style="width:60%"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="banner-img wow fadeIn mb-45 animated d-lg-block d-none">
-                            <img src="assets/imgs/banner/banner-11.jpg" alt="">
-                            <div class="banner-text">
-                                <span>Women Zone</span>
-                                <h4>Save 17% on <br>Office Dress</h4>
-                                <a href="/shop">Shop Now <i class="fi-rs-arrow-right"></i></a>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -1364,7 +1427,7 @@
                                 <h4 class="font-size-20 mb-0 ml-3">Sign up to Newsletter</h4>
                             </div>
                             <div class="col my-4 my-md-0 des">
-                                <h5 class="font-size-15 ml-4 mb-0">...and receive <strong>$25 coupon for first shopping.</strong></h5>
+                                <h5 class="font-size-15 ml-4 mb-0">...and receive <strong>Pkr.25 coupon for first shopping.</strong></h5>
                             </div>
                         </div>
                     </div>
@@ -1503,10 +1566,10 @@
     <script src="assets/js/plugins/jquery.elevatezoom.js"></script>
     <!-- Template  JS -->
     <script src="./assets/js/main.js?v=3.4"></script>
-    <script src="./assets/js/shop.js?v=3.4"></script>
+    <script src="./assets/js/shopjewel.js?v=3.4"></script>
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"949736cff8d64b55","version":"2025.5.0","r":1,"token":"3aa9a3481f734e94bceb8bb1bd648ba1","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}'
         crossorigin="anonymous"></script>
-   <script>
+         <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Initialize cart from localStorage or create empty array
         let cart = JSON.parse(localStorage.getItem('evara-cart')) || [];

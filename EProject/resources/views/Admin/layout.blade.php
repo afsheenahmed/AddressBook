@@ -69,9 +69,16 @@
                     </div>
                 </li>
                 <li class="menu-item has-submenu">
-                    <a class="menu-link" href="page-sellers-cards.html">
+                    <a class="menu-link" href="/viewvendors">
                         <span class="material-symbols-outlined icon">store</span>
-                        <span class="text">Sellers</span>
+                        <span class="text">Vendors</span>
+                    </a>
+                </li>
+
+                 <li class="menu-item">
+                    <a class="menu-link"  href="/viewusers">
+                        <span class="material-symbols-outlined icon">person</span>
+                        <span class="text">Users</span>
                     </a>
                 </li>
                 <li class="menu-item has-submenu">

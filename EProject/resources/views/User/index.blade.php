@@ -308,17 +308,26 @@
                     </div>
                     <div class="col-xl-3 col-lg-4">
                         <div class="header-info header-info-right">
-                            <ul>
-                                <li>
-                                    <a class="language-dropdown-active" href="#"> <i class="fi-rs-world"></i> English <i class="fi-rs-angle-small-down"></i></a>
-                                    <ul class="language-dropdown">
-                                        <li><a href="#"><img src="assets/imgs/theme/flag-fr.png" alt="">Français</a></li>
-                                        <li><a href="#"><img src="assets/imgs/theme/flag-dt.png" alt="">Deutsch</a></li>
-                                        <li><a href="#"><img src="assets/imgs/theme/flag-ru.png" alt="">Pусский</a></li>
-                                    </ul>
-                                </li>
-                                <li><i class="fas fa-user"></i><a href="/userlogin">Log In / Sign Up</a></li>
-                            </ul>
+                           <ul>
+    <li><i class="fas fa-user"></i><a href="/vendorregister">Become Vendor</a></li>
+    
+    @auth
+        {{-- Show logout option if user is authenticated --}}
+        <li>
+            <i class="fas fa-user"></i>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <a href="{{ route('logout') }}" 
+                   onclick="event.preventDefault(); this.closest('form').submit();">
+                   Log Out
+                </a>
+            </form>
+        </li>
+    @else
+        {{-- Show login option if user is not authenticated --}}
+        <li><i class="fas fa-user"></i><a href="{{ route('login') }}">Become Member</a></li>
+    @endauth
+</ul>
                         </div>
                     </div>
                 </div>
@@ -567,10 +576,8 @@
                                             <li><a href="/about">About Us</a></li>
                                             <li><a href="/contact">Contact</a></li>
                                             <li><a href="/account">My Account</a></li>
-                                            <li><a href="/userlogin">login/register</a></li>
-                                            <li><a href="page-purchase-guide.html">Purchase Guide</a></li>
-                                            <li><a href="/privacypolicy">Privacy Policy</a></li>
-                                            <li><a href="/terms">Terms of Service</a></li>
+                                            <li><a href="/userlogin">Login/Register</a></li>
+                                           
                                             <li><a href="/404">404 Page</a></li>
                                         </ul>
                                     </li>
@@ -726,10 +733,8 @@
                                     <li><a href="/about">About Us</a></li>
                                     <li><a href="/contact">Contact</a></li>
                                     <li><a href="/account">My Account</a></li>
-                                    <li><a href="/userlogin">login/register</a></li>
-                                    <li><a href="page-purchase-guide.html">Purchase Guide</a></li>
-                                    <li><a href="/privacypolicy">Privacy Policy</a></li>
-                                    <li><a href="/terms">Terms of Service</a></li>
+                                    <li><a href="/userlogin">Login/Register</a></li>
+                                   
                                     <li><a href="/404">404 Page</a></li>
                                 </ul>
                             </li>

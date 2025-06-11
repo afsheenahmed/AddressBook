@@ -104,26 +104,47 @@
                                         <div class="heading_s1">
                                             <h3 class="mb-30">Login to Your Account</h3>
                                         </div>
-                                        <form method="post">
-                                            <div class="form-group">
-                                                <input type="text" required="" name="email" placeholder="Your Email" class="form-control" style="background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(0, 0, 0, 0.1);">
-                                            </div>
-                                            <div class="form-group">
-                                                <input required="" type="password" name="password" placeholder="Password" class="form-control" style="background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(0, 0, 0, 0.1);">
-                                            </div>
-                                            <div class="login_footer form-group">
-                                                <div class="chek-form">
-                                                    <div class="custome-checkbox">
-                                                        <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox1" value="">
-                                                        <label class="form-check-label" for="exampleCheckbox1"><span>Remember me</span></label>
-                                                    </div>
-                                                </div>
-                                                <a class="text-muted" href="#">Forgot password?</a>
-                                            </div>
-                                            <div class="form-group">
-                                                <button type="submit" class="btn btn-fill-out btn-block hover-up" name="login" style="background: linear-gradient(135deg, rgba(91, 228, 155, 0.8), rgba(0, 181, 204, 0.8)); border: none;">Log in</button>
-                                            </div>
-                                        </form>
+                                        <x-validation-errors class="mb-4" />
+
+        @if (session('status'))
+          <div class="mb-4 font-medium text-sm text-success">
+              {{ session('status') }}
+          </div>
+        @endif
+
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+
+            <div class="mb-3">
+                <x-label for="email" value="{{ __('Email') }}" />
+                <x-input id="email" class="form-control" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            </div>
+
+            <div class="mb-3">
+                <x-label for="password" value="{{ __('Password') }}" />
+                <x-input id="password" class="form-control" type="password" name="password" required autocomplete="current-password" />
+            </div>
+
+            <div class="form-check mb-3">
+                <x-checkbox id="remember_me" name="remember" class="form-check-input" />
+                <label class="form-check-label ms-2" for="remember_me">
+                  {{ __('Remember me') }}
+                </label>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+              @if (Route::has('password.request'))
+                <a class="text-decoration-none text-primary" href="{{ route('password.request') }}">
+                    {{ __('Forgot your password?') }}
+                </a>
+              @endif
+
+              <x-button class="btn btn-primary ms-3">
+                  {{ __('Log in') }}
+              </x-button>
+            </div>
+                                </form>
+                                     
                                         <div class="divider-text-center mt-15 mb-15">
                                             <span> or</span>
                                         </div>
